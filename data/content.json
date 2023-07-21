@@ -1,11 +1,23 @@
 {
-    "profile": {
-      "name": "Your Name",
-      "email": "your.email@example.com"
+    "main_curriculum":{
+        "profile": {
+            "name": "Your Name",
+            "email": "your.email@example.com"
+        },
+        "presentationText": {
+            "title": "Main Curriculum",
+            "text": "This is a short description about me..."
+        }
     },
-    "presentationText": {
-      "title": "Hello, I'm Your Name",
-      "text": "This is a short description about me..."
+    "secondary_curriculum":{
+        "profile": {
+            "name": "Your Name",
+            "email": "your.email@example.com"
+        },
+        "presentationText": {
+            "title": "Secondary Curriculum",
+            "text": "This is a short description about me..."
+        }
     }
-  }
+}
   
