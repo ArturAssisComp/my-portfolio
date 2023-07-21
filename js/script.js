@@ -23,6 +23,9 @@ const populateWebsite = (data, curriculum) => {
     document.querySelector('#email').textContent = data[curriculum].profile.email;
     document.querySelector('#presentation-title').textContent = data[curriculum].presentationText.title;
     document.querySelector('#presentation-text').textContent = data[curriculum].presentationText.text;
+
+    const lastUpdated = new Date(data[curriculum].lastUpdated);
+    document.querySelector('#last-updated').textContent = "Curriculum Last Updated on: " + lastUpdated.toLocaleDateString() + " " + lastUpdated.toLocaleTimeString();
   };
 
 
