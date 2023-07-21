@@ -1,0 +1,11 @@
+{
+    "profile": {
+      "name": "Your Name",
+      "email": "your.email@example.com"
+    },
+    "presentationText": {
+      "title": "Hello, I'm Your Name",
+      "text": "This is a short description about me..."
+    }
+  }
+  
