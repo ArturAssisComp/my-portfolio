@@ -18,6 +18,7 @@ const populateSelectOptions = (data) => {
 };
 
 const populateWebsite = (data, curriculum) => {
+    document.querySelector('#profile-image').src = data[curriculum].profile.image;
     document.querySelector('#name').textContent = data[curriculum].profile.name;
     document.querySelector('#email').href = "mailto:" + data[curriculum].profile.email;
     document.querySelector('#email').textContent = data[curriculum].profile.email;
