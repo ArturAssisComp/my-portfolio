@@ -1,3 +1,4 @@
+/*----------------------------------------------------------------------------*/
 const populateSelectOptions = (data) => {
     const select = document.querySelector('#curriculum-select');
     
@@ -17,8 +18,10 @@ const populateSelectOptions = (data) => {
   }
 };
 
+/*----------------------------------------------------------------------------*/
 // Function to set the profile image and name
 const setProfileDetails = (data) => {
+    document.title = data.profile.title;
     document.querySelector('#profile-image').src = data.profile.image;
     document.querySelector('#name').textContent = data.profile.name;
 };
@@ -99,6 +102,7 @@ const populateProfile = (data) => {
     setEmail(data);
     addSocialMediaLinks(data);
 };
+/*----------------------------------------------------------------------------*/
 
 const populateCurriculum = (data, curriculum) => {
     // Populate Curriculum
@@ -119,3 +123,5 @@ const populateCurriculum = (data, curriculum) => {
     });
   });
   
+
+
