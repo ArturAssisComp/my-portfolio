@@ -24,12 +24,156 @@
             "presentationText": {
                 "title": "Main Curriculum",
                 "text": "This is a short description about me..."
-            }
+            },
+            "skills":{
+                "technical":{
+                    "Python":{
+                        "level": "Expert",
+                        "description": "I have contact with python during my graduation, and I have been using it for 3 years. I have experience with Django, Flask, Pandas, Numpy, Matplotlib, Seaborn, Scikit-learn, Pytorch, Tensorflow, Keras, and other libraries. I have experience with data science, machine learning, deep learning, and web development.",
+                        "frameworks":[
+                            "Django",
+                            "Flask"
+                        ]
+                    },
+                    "JavaScript":{
+                        "level": "Expert",
+                        "description": "I have contact with JavaScript during my graduation, and I have been using it for 3 years. I have experience with React, Node.js, Express, and other libraries. I have experience with web development.",
+                        "frameworks":[
+                            "React",
+                            "Node.js",
+                            "Express"
+                        ]
+                    },
+                    "Java":{
+                        "level": "Intermediate"
+                    },
+                    "C":{
+                        "level": "Intermediate"
+                    }
+                },
+                "soft":{
+                    "Communication":{
+                        "level": "Expert",
+                        "description": "I have experience with public speaking, and I have been a speaker at events and meetups. I have experience with writing articles and tutorials. I have experience with teaching and mentoring.",
+                        "keywords":[
+                            "Public Speaking",
+                            "Writing",
+                            "Teaching",
+                            "Mentoring"
+                        ]
+                    },
+                    "Leadership":{
+                        "level": "Expert",
+                        "description": "I have experience with leading teams and projects. I have experience with managing people and resources.",
+                        "keywords":[
+                            "Team Leadership",
+                            "Project Management",
+                            "People Management",
+                            "Resource Management"
+                        ]
+                    },
+                    "Teamwork":{
+                        "level": "Expert",
+                        "description": "I have experience with working in teams. I have experience with collaborating with people from different backgrounds.",
+                        "keywords":[
+                            "Teamwork",
+                            "Collaboration"
+                        ]
+                    },
+                    "Problem Solving":{
+                        "level": "Expert",
+                        "description": "I have experience with solving complex problems. I have experience with analyzing problems and finding solutions.",
+                        "keywords":[
+                            "Problem Solving",
+                            "Analytical Thinking"
+                        ]
+                    },
+                    "Creativity":{
+                        "level": "Expert",
+                        "description": "I have experience with coming up with creative solutions. I have experience with thinking outside the box.",
+                        "keywords":[
+                            "Creativity",
+                            "Out of the Box Thinking"
+                        ]
+                    },
+                    "Adaptability":{
+                        "level": "Intermediate",
+                        "description": "I have experience with adapting to new situations. I have experience with learning new things quickly.",
+                        "keywords":[
+                            "Adaptability",
+                            "Fast Learner"
+                        ]
+                    }
+                }
+            },
+            "professionalExperience": [
+                {
+                    "role": "Software Engineer",
+                    "seniority": "Senior",
+                    "company": "Company 1",
+                    "startDate": "2018-07-01",
+                    "endDate": "2022-07-01",
+                    "description": "Worked on developing and maintaining the company's main software product...",
+                    "projects": [
+                        {
+                            "name": "Project 1",
+                            "duration": 2, 
+                            "description": "This project involved building a complex web application...",
+                            "responsibilities": [
+                                "Led a team of 5 developers",
+                                "Designed the application architecture",
+                                "Implemented key components of the system"
+                            ],
+                            "achievements": [
+                                "Successfully delivered the project on time",
+                                "Achieved a customer satisfaction rating of 95%",
+                                "The application was recognized as 'Best Web Application' in the XYZ Awards 2019"
+                            ],
+                            "skillsUsed": ["JavaScript", "React", "Node.js", "MySQL"]
+                        },
+                        {
+                            "name": "Project 2",
+                            "duration": 4,
+                            "description": "This project involves maintaining and extending a large-scale e-commerce platform...",
+                            "responsibilities": [
+                                "Manage deployments and releases",
+                                "Optimize performance and scalability",
+                                "Implement new features based on customer feedback"
+                            ],
+                            "skillsUsed": ["Python", "Django", "PostgreSQL", "Docker"]
+                        }
+                    ]
+                },
+                {
+                    "role": "Developer",
+                    "seniority": "Junior",
+                    "company": "Company 2",
+                    "startDate": "2016-01-01",
+                    "endDate": "2018-06-30",
+                    "description": "Assisted in building and testing new features for the company's web application..."
+                }
+            ]
         },
         "Secondary Curriculum":{
             "lastUpdated": "2022-07-21T12:34:56Z",
             "presentationText": {
                 "title": "Secondary Curriculum",
+                "text": "This is a short description about me..."
+            },
+            "professionalExperience": [
+                {
+                    "role": "Junior Developer",
+                    "company": "Company 2",
+                    "startDate": "2016-01-01",
+                    "endDate": "2018-06-30",
+                    "description": "Assisted in building and testing new features for the company's web application..."
+                }
+            ]
+        },
+        "Third Curriculum":{
+            "lastUpdated": "2022-07-21T12:34:56Z",
+            "presentationText": {
+                "title": "Third Curriculum",
                 "text": "This is a short description about me..."
             }
         }
