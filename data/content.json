@@ -1,26 +1,36 @@
 {
-    "main_curriculum":{
-        "lastUpdated": "2023-07-21T12:34:56Z",
-        "profile": {
-            "name": "Your Name",
-            "email": "your.email@example.com",
-            "image": "images/profile_photo.png"
-        },
-        "presentationText": {
-            "title": "Main Curriculum",
-            "text": "This is a short description about me..."
+    "profile": {
+        "name": "Your Name",
+        "email": "your.email@example.com",
+        "image": "images/profile_photo.png",
+        "socialMedia":{
+            "wpp": "https://wa.me/+1234567890",
+            "github": "https://github.com/ArturAssisComp",
+            "linkedin": "https://www.linkedin.com/in/artur-assis-91621515a/",
+            "facebook": "https://www.facebook.com/",
+            "instagram": "https://www.instagram.com/arturassiscomp/",
+            "twitter": "https://twitter.com/ArturAssisComp",
+            "youtube": "https://www.youtube.com/channel/UCbBgUjhw95xX4X10Mf-enaQ",
+            "medium": "https://medium.com/",
+            "telegram": "https://t.me/",
+            "discord": "https://discord.gg/",
+            "other social media": "https://www.example.com/"
         }
     },
-    "secondary_curriculum":{
-        "lastUpdated": "2023-07-21T12:34:56Z",
-        "profile": {
-            "name": "Your Name",
-            "email": "your.email@example.com",
-            "image": "images/profile_photo.png"
+    "curricula":{
+        "Main Curriculum":{
+            "lastUpdated": "2023-07-21T12:34:56Z",
+            "presentationText": {
+                "title": "Main Curriculum",
+                "text": "This is a short description about me..."
+            }
         },
-        "presentationText": {
-            "title": "Secondary Curriculum",
-            "text": "This is a short description about me..."
+        "Secondary Curriculum":{
+            "lastUpdated": "2022-07-21T12:34:56Z",
+            "presentationText": {
+                "title": "Secondary Curriculum",
+                "text": "This is a short description about me..."
+            }
         }
     }
 }

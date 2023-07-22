@@ -10,12 +10,6 @@ body {
   min-height: 100vh;
 }
 
-.container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-  flex: 1 0 auto;
-}
 
 header {
   background: #50a8a1;
@@ -85,4 +79,33 @@ footer {
   /* Add border properties */
   border: 2px solid #000; /* This is a black border. Change the color to suit your design. */
   box-shadow: 0px 0px 10px #000; /* Optional: Add a shadow for a bit of depth. Adjust as needed. */
+}
+
+
+/* Classes */
+.small-logo {
+  height: 50px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+  flex: 1 0 auto;
+}
+
+.social-media-link {
+  padding: 10px;
+  background-color: #50a8a1;
+  color: white;
+  text-decoration: none;
+  margin: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.social-media-link:hover {
+  background-color: #8b8b8b;
 }
