@@ -147,3 +147,11 @@ footer {
 .social-media-link:hover {
   background-color: #8b8b8b;
 }
+
+
+.bold {
+  font-weight: bold;
+}
+.no-bullet {
+  list-style-type: none; /* This removes the bullet point */
+}

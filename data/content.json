@@ -106,6 +106,29 @@
                     }
                 }
             },
+            "education":[
+                {
+                    "level": "Bachelor's",
+                    "field": "Computer Science",
+                    "institution": "ABC University",
+                    "startYear": 2012,
+                    "endYear": 2016,
+                    "major": "Artificial Intelligence",
+                    "minor": "Mathematics",
+                    "relevant_courses": ["Machine Learning", "Data Structures and Algorithms", "Artificial Intelligence", "Database Systems"],
+                    "academic_achievements": ["Dean's list for 4 consecutive years", "Winner of Stanford's Annual Coding Competition"],
+                    "link_for_institution":"https://www.example.com/"
+                },
+                {
+                    "level": "Master's",
+                    "field": "Computer Science",
+                    "institution": "ABC University",
+                    "startYear": 2016,
+                    "endYear": 2050,
+                    "major": "Artificial Intelligence",
+                    "minor": "Mathematics"
+                }
+            ],
             "professionalExperience": [
                 {
                     "role": "Software Engineer",
