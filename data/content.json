@@ -175,7 +175,37 @@
             "presentationText": {
                 "title": "Third Curriculum",
                 "text": "This is a short description about me..."
-            }
+            },
+            "papers":[
+                {
+                    "title": "Paper 1",
+                    "authors": ["Author 1", "Author 2", "Author 3"],
+                    "journal": "Journal 1",
+                    "volume": "Volume 1",
+                    "number": "Number 1",
+                    "pages": "Pages 1",
+                    "conference": "Conference 1",
+                    "year": "2020",
+                    "doi": "https://doi.org/10.000/12345",
+                    "description": "This is the abstract of the paper...",
+                    "keywords": ["Keyword 1", "Keyword 2", "Keyword 3"],
+                    "download_link": "https://www.example.com/",
+                    "video_documentation_link": "https://www.youtube.com/embed/SYgkHIase9c"
+                },
+                {
+                    "title": "Paper 2",
+                    "authors": ["Author 1", "Author 2", "Author 3"],
+                    "journal": "Journal 2",
+                    "volume": "Volume 2",
+                    "number": "Number 2",
+                    "pages": "Pages 2",
+                    "conference": "Conference 2",
+                    "year": "2020",
+                    "doi": "https://doi.org/10.000/12345",
+                    "description": "This is the abstract of the paper...",
+                    "keywords": ["Keyword 1", "Keyword 2", "Keyword 3"]
+                }
+            ]
         }
     }
 }

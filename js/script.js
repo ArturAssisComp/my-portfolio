@@ -155,32 +155,32 @@ function createProjectList(experience, experienceContainer) {
     projectsTitle.textContent = "Projects";
     experienceContainer.appendChild(projectsTitle);
 
-    const projectsList = document.createElement('ul');
     experience.projects.forEach(project => {
-        const projectItem = document.createElement('li');
+        const projectContainer = document.createElement('div');
+        projectContainer.classList.add("section-container");
 
         // Add project name
         const projectName = document.createElement('h4');
         projectName.textContent = project.name;
-        projectItem.appendChild(projectName);
+        projectContainer.appendChild(projectName);
 
         // Check if duration exists
         if (project.duration) {
             const projectDuration = document.createElement('p');
             projectDuration.textContent = "Duration: " + project.duration + " months";
-            projectItem.appendChild(projectDuration);
+            projectContainer.appendChild(projectDuration);
         }
 
         // Add project description
         const projectDescription = document.createElement('p');
         projectDescription.textContent = project.description;
-        projectItem.appendChild(projectDescription);
+        projectContainer.appendChild(projectDescription);
 
         // Check if responsibilities exist
         if (project.responsibilities && project.responsibilities.length > 0) {
             const responsibilitiesTitle = document.createElement('h5');
             responsibilitiesTitle.textContent = "Responsibilities";
-            projectItem.appendChild(responsibilitiesTitle);
+            projectContainer.appendChild(responsibilitiesTitle);
 
             const responsibilitiesList = document.createElement('ul');
             project.responsibilities.forEach(responsibility => {
@@ -188,14 +188,14 @@ function createProjectList(experience, experienceContainer) {
                 responsibilityItem.textContent = responsibility;
                 responsibilitiesList.appendChild(responsibilityItem);
             });
-            projectItem.appendChild(responsibilitiesList);
+            projectContainer.appendChild(responsibilitiesList);
         }
 
         // Check if achievements exist
         if (project.achievements && project.achievements.length > 0) {
             const achievementsTitle = document.createElement('h5');
             achievementsTitle.textContent = "Achievements";
-            projectItem.appendChild(achievementsTitle);
+            projectContainer.appendChild(achievementsTitle);
 
             const achievementsList = document.createElement('ul');
             project.achievements.forEach(achievement => {
@@ -203,14 +203,14 @@ function createProjectList(experience, experienceContainer) {
                 achievementItem.textContent = achievement;
                 achievementsList.appendChild(achievementItem);
             });
-            projectItem.appendChild(achievementsList);
+            projectContainer.appendChild(achievementsList);
         }
 
         // Check if skills used exist
         if (project.skillsUsed && project.skillsUsed.length > 0) {
             const skillsUsedTitle = document.createElement('h5');
             skillsUsedTitle.textContent = "Skills Used";
-            projectItem.appendChild(skillsUsedTitle);
+            projectContainer.appendChild(skillsUsedTitle);
 
             const skillsUsedList = document.createElement('ul');
             project.skillsUsed.forEach(skill => {
@@ -218,13 +218,12 @@ function createProjectList(experience, experienceContainer) {
                 skillItem.textContent = skill;
                 skillsUsedList.appendChild(skillItem);
             });
-            projectItem.appendChild(skillsUsedList);
+            projectContainer.appendChild(skillsUsedList);
         }
 
         // Add project item to project list
-        projectsList.appendChild(projectItem);
+        experienceContainer.appendChild(projectContainer);
     });
-    experienceContainer.appendChild(projectsList);
 }
 
 
@@ -233,7 +232,7 @@ const populateProfessionalExperience = (data, curriculum) => {
     const professionalExperience = data.curricula[curriculum].professionalExperience;
     const professionalExperienceContainer = document.querySelector('#professional-experience');
     professionalExperienceContainer.innerHTML = '';
-    if (professionalExperience.length > 0) {
+    if (professionalExperience && professionalExperience.length > 0) {
         // Add H1 for Professional Experience
         const professionalExperienceTitle = document.createElement('h1');
         professionalExperienceTitle.textContent = "Professional Experience";
@@ -242,6 +241,7 @@ const populateProfessionalExperience = (data, curriculum) => {
         // Add Professional Experience
         professionalExperience.forEach(experience => {
                 const experienceContainer = document.createElement('div');
+                experienceContainer.classList.add("section-container");
                 experienceContainer.classList.add("experience");
                 
 
@@ -263,7 +263,7 @@ const populateProfessionalExperience = (data, curriculum) => {
 
                 // Add the start and end dates
                 const experienceDates = document.createElement('p');
-                experienceDates.textContent = "Start - end: " + startDate.toLocaleDateString() + " - " + endDate.toLocaleDateString();
+                experienceDates.textContent = startDate.toLocaleDateString() + " - " + endDate.toLocaleDateString();
                 experienceContainer.appendChild(experienceDates);
 
 
@@ -284,6 +284,92 @@ const populateProfessionalExperience = (data, curriculum) => {
     }
 };
 
+
+function populatePapers(data, curriculum) {
+    const papersContainer = document.querySelector('#papers');
+    papersContainer.innerHTML = '';
+    const papers = data.curricula[curriculum].papers;
+
+    if (papers && papers.length > 0){
+        const papersTitle = document.createElement('h1');
+        papersTitle.textContent = "Papers";
+        papersContainer.appendChild(papersTitle);
+
+        papers.forEach((paper) => {
+            if (!paper.title || !paper.authors) {
+                throw new Error(`Missing mandatory fields in paper: ${paper.title || 'Unnamed Paper'}`);
+            }
+
+            const paperContainer = document.createElement('div');
+            paperContainer.classList.add('section-container');
+
+            // Mandatory fields
+            const paperTitle = document.createElement('h2');
+            paperTitle.textContent = paper.title;
+            paperContainer.appendChild(paperTitle);
+
+            if (paper.video_documentation_link) {
+                const paperVideo = document.createElement('iframe');
+                paperVideo.src = paper.video_documentation_link;
+                paperVideo.setAttribute('width', '560');
+                paperVideo.setAttribute('height', '315');
+                paperVideo.setAttribute('title', 'YouTube video player');
+                paperVideo.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+                paperVideo.setAttribute('frameborder', '0');
+                paperVideo.setAttribute('allowfullscreen', '');
+                paperContainer.appendChild(paperVideo);
+            }
+
+            if (paper.description) {
+                const paperDescription = document.createElement('p');
+                paperDescription.textContent = paper.description;
+                paperContainer.appendChild(paperDescription);
+            }
+
+            const paperCitation = document.createElement('p');
+            paperCitation.textContent = `${paper.authors.join(', ')} . ${paper.title}.`;
+
+            if (paper.journal) paperCitation.textContent += ` ${paper.journal},`;
+            if (paper.volume) paperCitation.textContent += ` v. ${paper.volume},`;
+            if (paper.number) paperCitation.textContent += ` n. ${paper.number},`;
+            if (paper.pages) paperCitation.textContent += ` p. ${paper.pages},`;
+            if (paper.year) paperCitation.textContent += ` ${paper.year}.`;
+
+            paperContainer.appendChild(paperCitation);
+
+            if (paper.doi) {
+                const paperDoi = document.createElement('a');
+                paperDoi.href = paper.doi;
+                paperDoi.textContent = "DOI";
+                paperDoi.target = '_blank';
+                paperDoi.classList.add('social-media-link');
+                paperContainer.appendChild(paperDoi);
+            }
+
+            if (paper.download_link) {
+                const paperDownloadLink = document.createElement('a');
+                paperDownloadLink.href = paper.download_link;
+                const img = document.createElement('img');
+                img.src = "images/icons/download_icon.png";
+                img.alt = "Download";
+                img.id = `download-logo-${paper.title}`;
+                img.classList.add("small-logo");
+                paperDownloadLink.appendChild(img);
+                paperDownloadLink.target = '_blank';
+                paperDownloadLink.classList.add('social-media-link');
+                paperContainer.appendChild(paperDownloadLink);
+            }
+
+            papersContainer.appendChild(paperContainer);
+        });
+
+    }
+};
+
+
+
+
+
 const populateCurriculum = (data, curriculum) => {
     // Populate Curriculum
     document.querySelector('#presentation-title').textContent = data.curricula[curriculum].presentationText.title;
@@ -293,6 +379,9 @@ const populateCurriculum = (data, curriculum) => {
 
     // Populate Professional Experience
     populateProfessionalExperience(data, curriculum);
+
+    // Populate Papers
+    populatePapers(data, curriculum);
 
   };
 
