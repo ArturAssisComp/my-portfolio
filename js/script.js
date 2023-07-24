@@ -367,6 +367,112 @@ function populatePapers(data, curriculum) {
 };
 
 
+function populateEducation(data, curriculum) {
+    const educationContainer = document.querySelector('#education');
+    educationContainer.innerHTML = '';
+    const educationAchievements = data.curricula[curriculum].education;
+
+    if (educationAchievements && educationAchievements.length > 0){
+        const educationTitle = document.createElement('h1');
+        educationTitle.textContent = "Education";
+        educationContainer.appendChild(educationTitle);
+        educationAchievements.forEach((educationAchievement) => {
+            if (!educationAchievement.level || !educationAchievement.startYear || !educationAchievement.institution || !educationAchievement.endYear) {
+                throw new Error(`Missing mandatory fields in education: ${educationAchievement.level || 'Unnamed Level'} ${educationAchievement.startYear || 'Unnamed Start Year'} ${educationAchievement.institution || 'Unnamed Institution'} ${educationAchievement.endDate || 'Unnamed End Date'}`);
+            }
+            // Check if endYear is less than current year
+            if (educationAchievement.endYear < educationAchievement.startYear) {
+                throw new Error(`End year is less than start year in education: `);
+            }
+
+            const educationAchievementContainer = document.createElement('div');
+            educationAchievementContainer.classList.add('section-container');
+
+
+            var titleString = educationAchievement.level;
+            if (educationAchievement.field) {
+                titleString += ` in ${educationAchievement.field}`;
+            }
+
+            titleString += ` on ${educationAchievement.institution}`;
+
+            const title = document.createElement('h2');
+            title.textContent = titleString;
+            educationAchievementContainer.appendChild(title);
+
+            var startEndString = educationAchievement.startYear;
+            // check if endYear is greater than current year
+            if (educationAchievement.endYear > new Date().getFullYear()) {
+                startEndString += ` - Not Completed Yet (Expected ${educationAchievement.endYear})` ;
+            } else {
+                startEndString += ` - ${educationAchievement.endYear}`;
+            }
+
+            const startEnd = document.createElement('p');
+            startEnd.textContent = startEndString;
+            educationAchievementContainer.appendChild(startEnd);
+
+            const educationInstitution = document.createElement('p');
+            educationInstitution.textContent = educationAchievement.institution;
+            educationAchievementContainer.appendChild(educationInstitution);
+
+
+            if (educationAchievement.major) {
+                const major = document.createElement('p');
+                major.textContent = `Major: ${educationAchievement.major}`;
+                educationAchievementContainer.appendChild(major);
+            }
+
+            if (educationAchievement.minor) {
+                const minor = document.createElement('p');
+                minor.textContent = `Minor: ${educationAchievement.minor}`;
+                educationAchievementContainer.appendChild(minor);
+            }
+
+            if (educationAchievement.relevant_courses) {
+                const relevantCoursesTitle = document.createElement('h3');
+                relevantCoursesTitle.textContent = 'Relevant Courses:';
+                educationAchievementContainer.appendChild(relevantCoursesTitle);
+                const relevantCourses = document.createElement('ul');
+                educationAchievement.relevant_courses.forEach((course) => {
+                    const li = document.createElement('li');
+                    li.textContent = course;
+                    relevantCourses.appendChild(li);
+                });
+                educationAchievementContainer.appendChild(relevantCourses);
+            }
+
+            if (educationAchievement.academic_achievements) {
+                const academicAchievementsTitle = document.createElement('h3');
+                academicAchievementsTitle.textContent = 'Academic Achievements:';
+                educationAchievementContainer.appendChild(academicAchievementsTitle);
+                const academicAchievements = document.createElement('ul');
+                educationAchievement.academic_achievements.forEach((achievement) => {
+                    const li = document.createElement('li');
+                    li.textContent = achievement;
+                    academicAchievements.appendChild(li);
+                });
+                educationAchievementContainer.appendChild(academicAchievements);
+            }
+
+            if (educationAchievement.link_for_institution) {
+                const institutionLink = document.createElement('a');
+                institutionLink.href = educationAchievement.link_for_institution;
+                const img = document.createElement('img');
+                img.src = "images/icons/university_icon.png";
+                img.alt = "${educationAchievement.institution} Website";
+                img.id = `institution-logo-${educationAchievement.institution}`;
+                img.classList.add("small-logo");
+                institutionLink.appendChild(img);
+                institutionLink.target = '_blank';
+                institutionLink.classList.add('social-media-link');
+                educationAchievementContainer.appendChild(institutionLink);
+            }
+
+            educationContainer.appendChild(educationAchievementContainer);
+        });
+    }
+}
 
 
 
@@ -379,6 +485,9 @@ const populateCurriculum = (data, curriculum) => {
 
     // Populate Professional Experience
     populateProfessionalExperience(data, curriculum);
+
+    // Populate Education
+    populateEducation(data, curriculum);
 
     // Populate Papers
     populatePapers(data, curriculum);
