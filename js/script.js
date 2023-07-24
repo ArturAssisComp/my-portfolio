@@ -475,6 +475,322 @@ function populateEducation(data, curriculum) {
 }
 
 
+function populateAchievementCourse(achievement, achievementsContainer) {
+    const achievementContainer = document.createElement('div');
+    achievementContainer.classList.add('section-container');
+
+    // Check for the mandatory fields
+    if (!achievement.title || !achievement.finishedDate || !achievement.description) {
+        throw new Error(`Missing mandatory fields in course: ${achievement.title || 'Unnamed Course'} ${achievement.finishedDate || 'Unnamed Finished Date'} ${achievement.description || 'Unnamed Description'}`);
+    }
+
+    // Create the title
+    const courseTitle = document.createElement('h2');
+    // Title "Course: <course name> at <institution>"
+    var titleString = "Course \"" + achievement.title + "\"";
+    if (achievement.institution) {
+        titleString += " at " + achievement.institution;
+    }
+    courseTitle.textContent = titleString;
+
+    achievementContainer.appendChild(courseTitle);
+
+    // Add the finished date and the duration
+    const finishedDate = document.createElement('p');
+    finishedDate.textContent = "Finished on " + new Date(achievement.finishedDate).toLocaleDateString();
+    achievementContainer.appendChild(finishedDate);
+    if (achievement.duration) {
+        const duration = document.createElement('p');
+        duration.textContent = "Duration: " + achievement.duration + " months";
+        achievementContainer.appendChild(duration);
+    }
+
+    // Add description:
+    const description = document.createElement('p');
+    description.textContent = achievement.description;
+    achievementContainer.appendChild(description);
+
+    // Add skills learned:
+    if (achievement.skillsLearned && achievement.skillsLearned.length > 0) {
+        const skillsLearnedTitle = document.createElement('h3');
+        skillsLearnedTitle.textContent = "Skills Learned";
+        achievementContainer.appendChild(skillsLearnedTitle);
+
+        const skillsLearnedList = document.createElement('ul');
+        achievement.skillsLearned.forEach(skill => {
+            const skillItem = document.createElement('li');
+            skillItem.textContent = skill;
+            skillsLearnedList.appendChild(skillItem);
+        });
+        achievementContainer.appendChild(skillsLearnedList);
+    }
+
+    // Add course link and project link:
+    if(achievement.courseLink){
+        const courseLink = document.createElement('a');
+        courseLink.href = achievement.courseLink;
+        courseLink.textContent = "Course";
+        courseLink.target = '_blank';
+        courseLink.classList.add('social-media-link');
+        achievementContainer.appendChild(courseLink);
+    }
+    if (achievement.projectLink) {
+        const projectLink = document.createElement('a');
+        projectLink.href = achievement.projectLink;
+        projectLink.textContent = "Project";
+        projectLink.target = '_blank';
+        projectLink.classList.add('social-media-link');
+        achievementContainer.appendChild(projectLink);
+    }
+    achievementsContainer.appendChild(achievementContainer);
+}
+
+function populateAchievementProgrammingProject(achievement, achievementsContainer) {
+    const achievementContainer = document.createElement('div');
+    achievementContainer.classList.add('section-container');
+
+    // Check for the mandatory fields
+    if (!achievement.title || !achievement.finishedDate || !achievement.description) {
+        throw new Error(`Missing mandatory fields in programming project: ${achievement.title || 'Unnamed Programming Project'} ${achievement.finishedDate || 'Unnamed Finished Date'} ${achievement.description || 'Unnamed Description'}`);
+    }
+
+    // Create the title
+    const programmingProjectTitle = document.createElement('h2');
+    programmingProjectTitle.textContent = "Programming Project \"" + achievement.title + "\"";
+
+    achievementContainer.appendChild(programmingProjectTitle);
+
+    // Add the emdedded video documentation
+    if (achievement.videoDocumentationLink) {
+        const videoDocumentation = document.createElement('iframe');
+        videoDocumentation.src = achievement.videoDocumentationLink;
+        videoDocumentation.setAttribute('width', '560');
+        videoDocumentation.setAttribute('height', '315');
+        videoDocumentation.setAttribute('title', 'YouTube video player');
+        videoDocumentation.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        videoDocumentation.setAttribute('frameborder', '0');
+        videoDocumentation.setAttribute('allowfullscreen', '');
+        achievementContainer.appendChild(videoDocumentation);
+    }
+
+    // Add the finished date and the duration
+    const finishedDate = document.createElement('p');
+    finishedDate.textContent = "Finished on " + new Date(achievement.finishedDate).toLocaleDateString();
+    achievementContainer.appendChild(finishedDate);
+    if (achievement.duration) {
+        const duration = document.createElement('p');
+        duration.textContent = "Duration: " + achievement.duration + " months";
+        achievementContainer.appendChild(duration);
+    }
+
+    // Add description:
+    const description = document.createElement('p');
+    description.textContent = achievement.description;
+    achievementContainer.appendChild(description);
+
+    // Add skills used:
+    if (achievement.skillsUsed && achievement.skillsUsed.length > 0) {
+        const skillsUsedTitle = document.createElement('h3');
+        skillsUsedTitle.textContent = "Skills Used";
+        achievementContainer.appendChild(skillsUsedTitle);
+
+        const skillsUsedList = document.createElement('ul');
+        achievement.skillsUsed.forEach(skill => {
+            const skillItem = document.createElement('li');
+            skillItem.textContent = skill;
+            skillsUsedList.appendChild(skillItem);
+        });
+        achievementContainer.appendChild(skillsUsedList);
+    }
+
+    // Add project link:
+    if (achievement.workingProjectLink) {
+        const projectLink = document.createElement('a');
+        projectLink.href = achievement.workingProjectLink;
+        projectLink.textContent = "Project";
+        projectLink.target = '_blank';
+        projectLink.classList.add('social-media-link');
+        achievementContainer.appendChild(projectLink);
+    }
+
+    // Add repository link
+    if (achievement.repositoryLink) {
+        const repositoryLink = document.createElement('a');
+        repositoryLink.href = achievement.repositoryLink;
+        const repositoryLogo = document.createElement('img');
+        repositoryLogo.src = "images/icons/github_icon.png";
+        repositoryLogo.alt = "Repository";
+        repositoryLogo.id = `repository-logo-${achievement.title}`;
+        repositoryLogo.classList.add("small-logo");
+        repositoryLink.appendChild(repositoryLogo);
+        repositoryLink.target = '_blank';
+        repositoryLink.classList.add('social-media-link');
+        achievementContainer.appendChild(repositoryLink);
+    }
+
+    achievementsContainer.appendChild(achievementContainer);
+}
+
+function populateAchievementPersonalProject(achievement, achievementsContainer) {
+    const achievementContainer = document.createElement('div');
+    achievementContainer.classList.add('section-container');
+
+    // Check for the mandatory fields
+    if (!achievement.title || !achievement.finishedDate || !achievement.description) {
+        throw new Error(`Missing mandatory fields in personal project: ${achievement.title || 'Unnamed personal Project'} ${achievement.finishedDate || 'Unnamed Finished Date'} ${achievement.description || 'Unnamed Description'}`);
+    }
+
+    // Create the title
+    const personalProjectTitle = document.createElement('h2');
+    personalProjectTitle.textContent = "Personal Project \"" + achievement.title + "\"";
+
+    achievementContainer.appendChild(personalProjectTitle);
+
+    // Add the emdedded video documentation
+    if (achievement.videoDocumentationLink) {
+        const videoDocumentation = document.createElement('iframe');
+        videoDocumentation.src = achievement.videoDocumentationLink;
+        videoDocumentation.setAttribute('width', '560');
+        videoDocumentation.setAttribute('height', '315');
+        videoDocumentation.setAttribute('title', 'YouTube video player');
+        videoDocumentation.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        videoDocumentation.setAttribute('frameborder', '0');
+        videoDocumentation.setAttribute('allowfullscreen', '');
+        achievementContainer.appendChild(videoDocumentation);
+    }
+
+    // Add the finished date and the duration
+    const finishedDate = document.createElement('p');
+    finishedDate.textContent = "Finished on " + new Date(achievement.finishedDate).toLocaleDateString();
+    achievementContainer.appendChild(finishedDate);
+    if (achievement.duration) {
+        const duration = document.createElement('p');
+        duration.textContent = "Duration: " + achievement.duration + " months";
+        achievementContainer.appendChild(duration);
+    }
+
+    // Add description:
+    const description = document.createElement('p');
+    description.textContent = achievement.description;
+    achievementContainer.appendChild(description);
+
+    // Add skills used:
+    if (achievement.skillsUsed && achievement.skillsUsed.length > 0) {
+        const skillsUsedTitle = document.createElement('h3');
+        skillsUsedTitle.textContent = "Skills Used";
+        achievementContainer.appendChild(skillsUsedTitle);
+
+        const skillsUsedList = document.createElement('ul');
+        achievement.skillsUsed.forEach(skill => {
+            const skillItem = document.createElement('li');
+            skillItem.textContent = skill;
+            skillsUsedList.appendChild(skillItem);
+        });
+        achievementContainer.appendChild(skillsUsedList);
+    }
+
+    // Add project link:
+    if (achievement.workingProjectLink) {
+        const projectLink = document.createElement('a');
+        projectLink.href = achievement.workingProjectLink;
+        projectLink.textContent = "Project";
+        projectLink.target = '_blank';
+        projectLink.classList.add('social-media-link');
+        achievementContainer.appendChild(projectLink);
+    }
+
+    achievementsContainer.appendChild(achievementContainer);
+}
+
+function populateAchievementCertification(achievement, achievementsContainer) {
+    const achievementContainer = document.createElement('div');
+    achievementContainer.classList.add('section-container');
+
+    // Check for the mandatory fields
+    if (!achievement.title || !achievement.finishedDate || !achievement.description || !achievement.institution) {
+        throw new Error(`Missing mandatory fields in certification: ${achievement.title || 'Unnamed Certification'} ${achievement.finishedDate || 'Unnamed Finished Date'} ${achievement.description || 'Unnamed Description'}`);
+    }
+
+    // Create the title
+    const certificationTitle = document.createElement('h2');
+    certificationTitle.textContent = "Certification \"" + achievement.title + "\" on " + achievement.institution;
+
+    achievementContainer.appendChild(certificationTitle);
+
+    // Add the finished date and the duration
+    const finishedDate = document.createElement('p');
+    finishedDate.textContent = "Finished on " + new Date(achievement.finishedDate).toLocaleDateString();
+    achievementContainer.appendChild(finishedDate);
+    if (achievement.duration) {
+        const duration = document.createElement('p');
+        duration.textContent = "Duration: " + achievement.duration + " months";
+        achievementContainer.appendChild(duration);
+    }
+
+    // Add description:
+    const description = document.createElement('p');
+    description.textContent = achievement.description;
+    achievementContainer.appendChild(description);
+
+    // Add skills certified:
+    if (achievement.skillsCertified && achievement.skillsCertified.length > 0) {
+        const skillsCertifiedTitle = document.createElement('h3');
+        skillsCertifiedTitle.textContent = "Skills Certified";
+        achievementContainer.appendChild(skillsCertifiedTitle);
+
+        const skillsCertifiedList = document.createElement('ul');
+        achievement.skillsCertified.forEach(skill => {
+            const skillItem = document.createElement('li');
+            skillItem.textContent = skill;
+            skillsCertifiedList.appendChild(skillItem);
+        });
+        achievementContainer.appendChild(skillsCertifiedList);
+    }
+
+    // Add certification link:
+    if (achievement.certificationLink) {
+        const certificationLink = document.createElement('a');
+        certificationLink.href = achievement.certificationLink;
+        certificationLink.textContent = "Certification";
+        certificationLink.target = '_blank';
+        certificationLink.classList.add('social-media-link');
+        achievementContainer.appendChild(certificationLink);
+    }
+
+    achievementsContainer.appendChild(achievementContainer);
+}
+
+
+
+
+function populateAchievements(data, curriculum) {
+    const achievementsContainer = document.querySelector('#achievements');
+    achievementsContainer.innerHTML = '';
+    const achievements = data.curricula[curriculum].achievements;
+    if (achievements && achievements.length > 0){
+        const achievementsTitle = document.createElement('h1');
+        achievementsTitle.textContent = "Achievements";
+        achievementsContainer.appendChild(achievementsTitle);
+        achievements.forEach((achievement) => {
+            switch (achievement.type) {
+                case 'course':
+                    populateAchievementCourse(achievement, achievementsContainer);
+                    break;
+                case 'programming-project':
+                    populateAchievementProgrammingProject(achievement, achievementsContainer);
+                    break;
+                case 'personal-project':
+                    populateAchievementPersonalProject(achievement, achievementsContainer);
+                    break;
+                case 'certification':
+                    populateAchievementCertification(achievement, achievementsContainer);
+                    break;
+                default:
+                    throw new Error(`Invalid achievement type: ${achievement.type}`);
+            }
+        });
+    }
+}
 
 const populateCurriculum = (data, curriculum) => {
     // Populate Curriculum
@@ -491,6 +807,9 @@ const populateCurriculum = (data, curriculum) => {
 
     // Populate Papers
     populatePapers(data, curriculum);
+
+    // Populate Achievements
+    populateAchievements(data, curriculum);
 
   };
 

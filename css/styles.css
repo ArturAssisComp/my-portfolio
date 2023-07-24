@@ -11,7 +11,7 @@ body {
 }
 
 header {
-  background: #50a8a1;
+  background: #68d7ce;
   color: white;
   padding-top: 30px;
   min-height: 70px;
@@ -54,7 +54,7 @@ main h2 {
 }
 
 footer {
-  background: #50a8a1;
+  background: #68d7ce;
   color: white;
   text-align: center;
   padding: 10px;
@@ -103,26 +103,13 @@ footer {
   line-height: 1.6em;
 }
 
-.section-container a.social-media-link {
-  display: inline-block;
-  margin-right: 10px;
-  color: #0084ff;
-  text-decoration: none;
-  font-size: 1.2em;
-}
 
-.section-container a.social-media-link:hover {
-  color: #0056b3;
-}
 
-.section-container img.small-logo {
-  height: 20px;
-  width: 20px;
-}
 
 /* Classes */
 .small-logo {
   height: 50px;
+  vertical-align: middle;
 }
 
 .container {
@@ -132,26 +119,27 @@ footer {
   flex: 1 0 auto;
 }
 
-.social-media-link {
+.social-media-link,
+.social-media-link:link,
+.social-media-link:visited {
+  height: 50px;
   padding: 10px;
-  background-color: #50a8a1;
+  background-color: #68d7ce;
   color: white;
-  text-decoration: none;
   margin: 5px;
   border-radius: 5px;
   display: inline-block;
   text-align: center;
   transition: background-color 0.3s ease;
+  text-decoration: none;
+  font-size: 1.2em;
+  vertical-align: middle;
 }
 
-.social-media-link:hover {
+.social-media-link:hover,
+.social-media-link:active {
   background-color: #8b8b8b;
+  color: white;
+  vertical-align: middle;
 }
 
-
-.bold {
-  font-weight: bold;
-}
-.no-bullet {
-  list-style-type: none; /* This removes the bullet point */
-}
