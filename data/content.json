@@ -175,6 +175,50 @@
                     "endDate": "2018-06-30",
                     "description": "Assisted in building and testing new features for the company's web application..."
                 }
+            ],
+            "achievements":[
+                {
+                    "type":"course",
+                    "title":"Course 1",
+                    "institution":"Institution 1",
+                    "finishedDate":"2020-01-01",
+                    "duration":3,
+                    "description":"This is a short description about the course...",
+                    "courseLink":"https://www.example.com/",  
+                    "projectLink":"https://www.example.com/",
+                    "skillsLearned": ["Python", "Django", "PostgreSQL", "Docker"]
+                },
+                {
+                    "type":"programming-project",
+                    "title":"Project 1",
+                    "finishedDate":"2020-01-01",
+                    "duration":3,
+                    "description":"This is a short description about the project...",
+                    "repositoryLink":"https://www.example.com/",
+                    "workingProjectLink":"https://www.example.com/",
+                    "videoDocumentationLink": "https://www.youtube.com/embed/SYgkHIase9c",
+                    "skillsUsed": ["Python", "Django", "PostgreSQL", "Docker"]
+                },
+                {
+                    "type":"personal-project",
+                    "title":"Project 1",
+                    "finishedDate":"2020-01-01",
+                    "duration":3,
+                    "description":"This is a short description about the project...",
+                    "workingProjectLink":"https://www.example.com/",
+                    "videoDocumentationLink": "https://www.youtube.com/embed/SYgkHIase9c",
+                    "skillsUsed": ["Python", "Django", "PostgreSQL", "Docker"]
+                },
+                {
+                    "type": "certification",
+                    "title": "Certification SQL",
+                    "institution": "Institution 1",
+                    "finishedDate": "2020-01-01",
+                    "duration": 3,
+                    "description": "This is a short description about the certification...",
+                    "certificationLink": "https://www.example.com/",
+                    "skillsCertified": ["Python", "Django", "PostgreSQL", "Docker"]
+                }
             ]
         },
         "Secondary Curriculum":{
