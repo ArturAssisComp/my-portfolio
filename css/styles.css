@@ -10,7 +10,6 @@ body {
   min-height: 100vh;
 }
 
-
 header {
   background: #50a8a1;
   color: white;
@@ -62,6 +61,7 @@ footer {
   border-top: #e8491d 3px solid;
   flex-shrink: 0;
 }
+
 #profile-container {
   display: flex;
   flex-direction: column;
@@ -81,6 +81,44 @@ footer {
   box-shadow: 0px 0px 10px #000; /* Optional: Add a shadow for a bit of depth. Adjust as needed. */
 }
 
+/* Shared Section Style */
+
+.section-container {
+  margin-bottom: 40px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.section-container h2 {
+  color: #444;
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.section-container p {
+  color: #666;
+  font-size: 1.2em;
+  line-height: 1.6em;
+}
+
+.section-container a.social-media-link {
+  display: inline-block;
+  margin-right: 10px;
+  color: #0084ff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.section-container a.social-media-link:hover {
+  color: #0056b3;
+}
+
+.section-container img.small-logo {
+  height: 20px;
+  width: 20px;
+}
 
 /* Classes */
 .small-logo {
