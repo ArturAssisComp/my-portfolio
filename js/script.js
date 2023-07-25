@@ -1,6 +1,6 @@
 /*----------------------------------------------------------------------------*/
 const populateSelectOptions = (data) => {
-    const select = document.querySelector('#curriculum-select');
+    const select = document.getElementById('curriculum-select');
     
     // Clear any existing options
     select.innerHTML = '';
@@ -23,13 +23,13 @@ const populateSelectOptions = (data) => {
 // Function to set the profile image and name
 const setProfileDetails = (data) => {
     document.title = data.profile.title;
-    document.querySelector('#profile-image').src = data.profile.image;
-    document.querySelector('#name').textContent = data.profile.name;
+    document.getElementById('profile-image').src = data.profile.image;
+    document.getElementById('name').textContent = data.profile.name;
 };
 
 // Function to set the email, or hide the email element if there's no email
 const setEmail = (data) => {
-    const emailElement = document.querySelector('#email');
+    const emailElement = document.getElementById('email');
 
     if (data.profile.email) {
         emailElement.href = "mailto:" + data.profile.email;
@@ -73,7 +73,7 @@ const createSocialMediaLink = (sm, link) => {
 
 // Function to add social media links to the profile
 const addSocialMediaLinks = (data) => {
-    const socialMediaContainer = document.querySelector('#social-media');
+    const socialMediaContainer = document.getElementById('social-media');
 
     // Clear the existing social media links
     socialMediaContainer.innerHTML = '';
@@ -226,17 +226,38 @@ function createProjectList(experience, experienceContainer) {
     });
 }
 
+function _createTitleH1WithBackToTop(title){
+
+    const container = document.createElement('div');
+    const titleH1 = document.createElement('h1');
+    const backToTop = document.createElement('a');
+    backToTop.href = "#table-of-contents";
+    const backToTopImg = document.createElement('img');
+    backToTopImg.src = "images/icons/back_to_top_icon.png";
+    backToTopImg.alt = "Back to Top";
+    backToTopImg.id = "back-to-top-logo";
+    backToTopImg.style.width = "25px";
+    backToTopImg.style.marginLeft = "10px";
+
+    backToTop.appendChild(backToTopImg);
+
+    titleH1.textContent = title;
+    container.appendChild(titleH1);
+    container.appendChild(backToTop);
+    container.style.display = "flex";
+    container.style.alignItems = "center";
+
+    return container;
+}
 
 const populateProfessionalExperience = (data, curriculum) => {
     // Populate Professional Experience
     const professionalExperience = data.curricula[curriculum].professionalExperience;
-    const professionalExperienceContainer = document.querySelector('#professional-experience');
+    const professionalExperienceContainer = document.getElementById('professional-experience');
     professionalExperienceContainer.innerHTML = '';
     if (professionalExperience && professionalExperience.length > 0) {
         // Add H1 for Professional Experience
-        const professionalExperienceTitle = document.createElement('h1');
-        professionalExperienceTitle.textContent = "Professional Experience";
-        professionalExperienceContainer.appendChild(professionalExperienceTitle);
+        professionalExperienceContainer.appendChild(_createTitleH1WithBackToTop("Professional Experience"));
 
         // Add Professional Experience
         professionalExperience.forEach(experience => {
@@ -286,14 +307,12 @@ const populateProfessionalExperience = (data, curriculum) => {
 
 
 function populatePapers(data, curriculum) {
-    const papersContainer = document.querySelector('#papers');
+    const papersContainer = document.getElementById('papers');
     papersContainer.innerHTML = '';
     const papers = data.curricula[curriculum].papers;
 
     if (papers && papers.length > 0){
-        const papersTitle = document.createElement('h1');
-        papersTitle.textContent = "Papers";
-        papersContainer.appendChild(papersTitle);
+        papersContainer.appendChild(_createTitleH1WithBackToTop("Papers"));
 
         papers.forEach((paper) => {
             if (!paper.title || !paper.authors) {
@@ -368,14 +387,12 @@ function populatePapers(data, curriculum) {
 
 
 function populateEducation(data, curriculum) {
-    const educationContainer = document.querySelector('#education');
+    const educationContainer = document.getElementById('education');
     educationContainer.innerHTML = '';
     const educationAchievements = data.curricula[curriculum].education;
 
     if (educationAchievements && educationAchievements.length > 0){
-        const educationTitle = document.createElement('h1');
-        educationTitle.textContent = "Education";
-        educationContainer.appendChild(educationTitle);
+        educationContainer.appendChild(_createTitleH1WithBackToTop("Education"));
         educationAchievements.forEach((educationAchievement) => {
             if (!educationAchievement.level || !educationAchievement.startYear || !educationAchievement.institution || !educationAchievement.endYear) {
                 throw new Error(`Missing mandatory fields in education: ${educationAchievement.level || 'Unnamed Level'} ${educationAchievement.startYear || 'Unnamed Start Year'} ${educationAchievement.institution || 'Unnamed Institution'} ${educationAchievement.endDate || 'Unnamed End Date'}`);
@@ -764,13 +781,11 @@ function populateAchievementCertification(achievement, achievementsContainer) {
 
 
 function populateAchievements(data, curriculum) {
-    const achievementsContainer = document.querySelector('#achievements');
+    const achievementsContainer = document.getElementById('achievements');
     achievementsContainer.innerHTML = '';
     const achievements = data.curricula[curriculum].achievements;
     if (achievements && achievements.length > 0){
-        const achievementsTitle = document.createElement('h1');
-        achievementsTitle.textContent = "Achievements";
-        achievementsContainer.appendChild(achievementsTitle);
+        achievementsContainer.appendChild(_createTitleH1WithBackToTop("Achievements"));
         achievements.forEach((achievement) => {
             switch (achievement.type) {
                 case 'course':
@@ -815,13 +830,11 @@ function createSkillElement(skillData, name) {
 }
 
 function populateSkills(data, curriculum) {
-    const skillsContainer = document.querySelector('#skills');
+    const skillsContainer = document.getElementById('skills');
     skillsContainer.innerHTML = '';
     const skills = data.curricula[curriculum].skills;
     if (skills && Object.keys(skills).length > 0){
-        const skillsTitle = document.createElement('h1');
-        skillsTitle.textContent = "Skills";
-        skillsContainer.appendChild(skillsTitle);
+        skillsContainer.appendChild(_createTitleH1WithBackToTop("Skills"));
 
         const technicalSkills = skills.technical;
         const softSkills = skills.soft;
@@ -902,14 +915,12 @@ function createLanguageElement(languageData) {
     
 
 function populateLanguages(data, curriculum) {
-    const languagesContainer = document.querySelector('#languages');
+    const languagesContainer = document.getElementById('languages');
     languagesContainer.innerHTML = '';
     const languages = data.curricula[curriculum].languages;
 
     if (languages && languages.length > 0){
-        const languagesTitle = document.createElement('h1');
-        languagesTitle.textContent = "Languages";
-        languagesContainer.appendChild(languagesTitle);
+        languagesContainer.appendChild(_createTitleH1WithBackToTop("Languages"));
 
         const list = document.createElement('ul');
         languages.forEach((language) => {
@@ -927,17 +938,91 @@ function populateLanguages(data, curriculum) {
     }
 }
 
-        
+var _id = 0;
+function _generateUniqueId(){
+    return "__unique_preffix" + _id++;
 
+}
+function setSubItems(parentElement, currentTableItem, level) {
+    const subItems = [];
+    if (level > 3){
+        return;
+    }
+    const children = parentElement.children;
+    // check if it is a heading element
+    const headingElement = 'h2';
+    for (var i = 0; i < children.length; i++){
+        if (children[i].tagName.toLowerCase() === 'div') {
+            const childrenOfDiv = children[i].querySelectorAll(headingElement);
+            
+            childrenOfDiv.forEach(childOfDiv => {
+
+                // Create an id for the sub-item:
+                childOfDiv.id = _generateUniqueId();
+                subItems.push({
+                    title: childOfDiv.textContent,
+                    id: childOfDiv.id
+                });
+            });
+        }
+
+    }
+
+    if (subItems.length > 0) {
+        const subItemList = document.createElement('ul');
+        subItems.forEach(subItem => {
+            const subListItem = document.createElement('li');
+            const subItemLink = document.createElement('a');
+            subItemLink.href = '#' + subItem.id;
+            subItemLink.textContent = subItem.title;
+            subListItem.appendChild(subItemLink);
+            subItemList.appendChild(subListItem);
+        });
+        currentTableItem.appendChild(subItemList);
+    }
+}
+        
+// Function to create table of contents
+function populateTableOfContents() {
+    // Define the sections that will appear in the table of contents.
+    const sections = [
+        {id: 'professional-experience', name: 'Professional Experience'},
+        {id: 'skills', name: 'Skills'},
+        {id: 'education', name: 'Education'},
+        {id: 'languages', name: 'Languages'},
+        {id: 'papers', name: 'Papers'},
+        {id: 'achievements', name: 'Achievements'}
+    ];
+
+    // Get the list element that will contain the table of contents.
+    const tableOfContentsList = document.getElementById('table-of-contents-list');
+    tableOfContentsList.innerHTML = '';
+
+    // For each section, create a list item with a link to the section.
+    sections.forEach(section => {
+        // check if the section.id is empty:
+        const sectionElement = document.getElementById(section.id);
+        if (sectionElement.textContent.trim() !== '') {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.href = '#' + section.id;
+            link.textContent = section.name;
+            listItem.appendChild(link);
+            tableOfContentsList.appendChild(listItem);
+
+            setSubItems(sectionElement, listItem, 2);
+        }
+    });
+}
 
 
 
 const populateCurriculum = (data, curriculum) => {
     // Populate Curriculum
-    document.querySelector('#presentation-title').textContent = data.curricula[curriculum].presentationText.title;
-    document.querySelector('#presentation-text').textContent = data.curricula[curriculum].presentationText.text;
+    document.getElementById('presentation-title').textContent = data.curricula[curriculum].presentationText.title;
+    document.getElementById('presentation-text').textContent = data.curricula[curriculum].presentationText.text;
     const lastUpdated = new Date(data.curricula[curriculum].lastUpdated);
-    document.querySelector('#last-updated').textContent = "Curriculum Last Updated on: " + lastUpdated.toLocaleDateString() + " " + lastUpdated.toLocaleTimeString();
+    document.getElementById('last-updated').textContent = "Curriculum Last Updated on: " + lastUpdated.toLocaleDateString() + " " + lastUpdated.toLocaleTimeString();
 
     // Populate Professional Experience
     populateProfessionalExperience(data, curriculum);
@@ -957,6 +1042,9 @@ const populateCurriculum = (data, curriculum) => {
     // Populate Achievements
     populateAchievements(data, curriculum);
 
+    // Populate table of contents
+    populateTableOfContents();
+
   };
 
 
@@ -965,7 +1053,7 @@ const populateCurriculum = (data, curriculum) => {
   .then(data => {
     populateSelectOptions(data);
     populateProfile(data);
-    document.querySelector('#curriculum-select').addEventListener('change', function() {
+    document.getElementById('curriculum-select').addEventListener('change', function() {
       populateCurriculum(data, this.value);
     });
   });
