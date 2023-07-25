@@ -799,15 +799,16 @@ function createSkillElement(skillData, name) {
     skillName.textContent = `${name} (${skillData.level})`;
     skillContainer.appendChild(skillName);
 
+    var containerTitleString = "";
     if (skillData.description) {
-        var containerTitleString = skillData.description;
-        if (skillData.keywords && skillData.keywords.length > 0) {
-            containerTitleString += "\n\nKeywords: " + skillData.keywords.join(', ');
-        } else if (skillData.frameworks && skillData.frameworks.length > 0){
-            containerTitleString += "\n\nFrameworks: " + skillData.frameworks.join(', ');
-        }
-        skillContainer.title = containerTitleString;
+        containerTitleString += skillData.description;
     }
+    if (skillData.keywords && skillData.keywords.length > 0) {
+        containerTitleString += "\n\nKeywords: " + skillData.keywords.join(', ');
+    } else if (skillData.frameworks && skillData.frameworks.length > 0){
+        containerTitleString += "\n\nFrameworks: " + skillData.frameworks.join(', ');
+    }
+    skillContainer.title = containerTitleString;
 
     skillElement.appendChild(skillContainer);
     return skillElement;
@@ -866,7 +867,65 @@ function populateSkills(data, curriculum) {
 }
 
 
-        
+
+function createLanguageElement(languageData) {
+    const languageElement = document.createElement('li');
+    const languageContainer = document.createElement('div');
+    const languageName = document.createElement('span');
+    languageName.textContent = `${languageData.language} (${languageData.proficiency})`;
+    languageContainer.appendChild(languageName);
+
+    var containerTitleString = "Native: " + (languageData.native?"Yes":"No");
+    if (languageData.writing) {
+        containerTitleString += "\n\nWriting: " + languageData.writing;
+    }
+    if (languageData.reading) {
+        containerTitleString += "\n\nReading: " + languageData.reading;
+    }
+    if (languageData.speaking) {
+        containerTitleString += "\n\nSpeaking: " + languageData.speaking;
+    }
+    if (languageData.listening) {
+        containerTitleString += "\n\nListening: " + languageData.listening;
+    }
+    if (languageData.certifications && languageData.certifications.length > 0) {
+        containerTitleString += "\n\nCertifications: ";
+        languageData.certifications.forEach((certification) => {
+            containerTitleString += "\n" + certification.name + " - " + certification.score + " - " + certification.date_received;
+        });
+    }
+    languageContainer.title = containerTitleString;
+
+    languageElement.appendChild(languageContainer);
+    return languageElement;
+}
+    
+
+function populateLanguages(data, curriculum) {
+    const languagesContainer = document.querySelector('#languages');
+    languagesContainer.innerHTML = '';
+    const languages = data.curricula[curriculum].languages;
+
+    if (languages && languages.length > 0){
+        const languagesTitle = document.createElement('h1');
+        languagesTitle.textContent = "Languages";
+        languagesContainer.appendChild(languagesTitle);
+
+        const list = document.createElement('ul');
+        languages.forEach((language) => {
+            if(!language.language || !language.proficiency){
+                throw new Error(`Missing mandatory fields in language: ${language.language || 'Unnamed Language'} ${language.proficiency || 'Unnamed Proficiency'}`);
+            }
+
+            list.appendChild(createLanguageElement(language));
+
+
+
+        });
+        languagesContainer.appendChild(list);
+
+    }
+}
 
         
 
@@ -888,6 +947,9 @@ const populateCurriculum = (data, curriculum) => {
 
     // Populate Education
     populateEducation(data, curriculum);
+
+    // Populate Languages
+    populateLanguages(data, curriculum);
 
     // Populate Papers
     populatePapers(data, curriculum);

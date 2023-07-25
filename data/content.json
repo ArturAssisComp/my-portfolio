@@ -235,7 +235,51 @@
                     "endDate": "2018-06-30",
                     "description": "Assisted in building and testing new features for the company's web application..."
                 }
-            ]
+            ],
+            "languages": [
+                {
+                  "language": "English",
+                  "proficiency": "Native or bilingual proficiency",
+                  "certifications": [
+                    {
+                      "name": "TOEFL iBT",
+                      "score": "114",
+                      "date_received": "2018",
+                      "link": "http://example-link-to-certification.com"
+                    }
+                  ],
+                  "native": true,
+                  "writing": "Fluent",
+                  "reading": "Fluent",
+                  "speaking": "Fluent",
+                  "listening": "Fluent"
+                },
+                {
+                  "language": "French",
+                  "proficiency": "Professional working proficiency",
+                  "certifications": [
+                    {
+                      "name": "DELF B2",
+                      "date_received": "2020",
+                      "link": "http://example-link-to-certification.com"
+                    }
+                  ],
+                  "native": false,
+                  "writing": "Good",
+                  "reading": "Good",
+                  "speaking": "Good",
+                  "listening": "Good"
+                },
+                {
+                  "language": "German",
+                  "proficiency": "Elementary proficiency",
+                  "native": false,
+                  "writing": "Basic",
+                  "reading": "Basic",
+                  "speaking": "Basic",
+                  "listening": "Basic"
+                }
+              ]
         },
         "Third Curriculum":{
             "lastUpdated": "2022-07-21T12:34:56Z",
