@@ -792,6 +792,87 @@ function populateAchievements(data, curriculum) {
     }
 }
 
+function createSkillElement(skillData, name) {
+    const skillElement = document.createElement('li');
+    const skillContainer = document.createElement('div');
+    const skillName = document.createElement('span');
+    skillName.textContent = `${name} (${skillData.level})`;
+    skillContainer.appendChild(skillName);
+
+    if (skillData.description) {
+        var containerTitleString = skillData.description;
+        if (skillData.keywords && skillData.keywords.length > 0) {
+            containerTitleString += "\n\nKeywords: " + skillData.keywords.join(', ');
+        } else if (skillData.frameworks && skillData.frameworks.length > 0){
+            containerTitleString += "\n\nFrameworks: " + skillData.frameworks.join(', ');
+        }
+        skillContainer.title = containerTitleString;
+    }
+
+    skillElement.appendChild(skillContainer);
+    return skillElement;
+}
+
+function populateSkills(data, curriculum) {
+    const skillsContainer = document.querySelector('#skills');
+    skillsContainer.innerHTML = '';
+    const skills = data.curricula[curriculum].skills;
+    if (skills && Object.keys(skills).length > 0){
+        const skillsTitle = document.createElement('h1');
+        skillsTitle.textContent = "Skills";
+        skillsContainer.appendChild(skillsTitle);
+
+        const technicalSkills = skills.technical;
+        const softSkills = skills.soft;
+
+        // create the technical skills section
+        const flexContainer = document.createElement('div');
+        flexContainer.classList.add('flex-container');
+        if (technicalSkills && Object.keys(technicalSkills).length > 0){
+            const technicalSkillsContainer = document.createElement('div');
+            technicalSkillsContainer.classList.add('section-container');
+            const technicalSkillsTitle = document.createElement('h2');
+            technicalSkillsTitle.textContent = "Technical";
+            technicalSkillsContainer.appendChild(technicalSkillsTitle);
+
+            const list = document.createElement('ul');
+            Object.keys(technicalSkills).forEach((name) => {
+                // create en unordered list
+                list.appendChild(createSkillElement(technicalSkills[name], name));
+            });
+            technicalSkillsContainer.appendChild(list);
+            flexContainer.appendChild(technicalSkillsContainer);
+        }
+
+        // create the soft skills section
+        if (softSkills && Object.keys(softSkills).length > 0){
+
+            const softSkillsContainer = document.createElement('div');
+            softSkillsContainer.classList.add('section-container');
+            const softSkillsTitle = document.createElement('h2');
+            softSkillsTitle.textContent = "Soft";
+            softSkillsContainer.appendChild(softSkillsTitle);
+
+            const list = document.createElement('ul');
+            Object.keys(softSkills).forEach((name) => {
+                list.appendChild(createSkillElement(softSkills[name], name));
+            });
+            softSkillsContainer.appendChild(list);
+            flexContainer.appendChild(softSkillsContainer);
+        }
+        skillsContainer.appendChild(flexContainer);
+
+    }
+}
+
+
+        
+
+        
+
+
+
+
 const populateCurriculum = (data, curriculum) => {
     // Populate Curriculum
     document.querySelector('#presentation-title').textContent = data.curricula[curriculum].presentationText.title;
@@ -801,6 +882,9 @@ const populateCurriculum = (data, curriculum) => {
 
     // Populate Professional Experience
     populateProfessionalExperience(data, curriculum);
+
+    // Populate Skills
+    populateSkills(data, curriculum);
 
     // Populate Education
     populateEducation(data, curriculum);
