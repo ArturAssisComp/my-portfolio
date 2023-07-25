@@ -143,3 +143,11 @@ footer {
   vertical-align: middle;
 }
 
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-container div {
+  flex: 1; 
+}
