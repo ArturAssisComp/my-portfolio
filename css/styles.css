@@ -146,7 +146,7 @@ footer {
 
 .flex-container {
   display: flex;
-  justify-content: space-between;
+  vertical-align: middle;
 }
 .flex-container div {
   flex: 1; 
