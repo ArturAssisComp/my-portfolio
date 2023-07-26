@@ -362,6 +362,19 @@ with the following fields:
     - `image` (optional, string): The path to the image of the person.
     - `socialMedia` (optional, dictionary): The social media of the person.
         - `<social-media-name>` (optional, string): The link to the social media.	
+        - `wpp` (optional, string): The link to the WhatsApp of the person. The
+        link must be in the format `https://wa.me/<phone-number>`. The phone number
+        must be in the format `+<country-code><phone-number>`. For example, the
+        link for the phone number `+1 (234) 567-890` is `https://wa.me/+1234567890`.
+        - `github` (optional, string): The link to the GitHub of the person.
+        - `linkedin` (optional, string): The link to the LinkedIn of the person.
+        - `facebook` (optional, string): The link to the Facebook of the person.
+        - `instagram` (optional, string): The link to the Instagram of the person.
+        - `twitter` (optional, string): The link to the Twitter of the person.
+        - `youtube` (optional, string): The link to the YouTube of the person.
+        - `medium` (optional, string): The link to the Medium of the person.
+        - `telegram` (optional, string): The link to the Telegram of the person.
+        - `discord` (optional, string): The link to the Discord of the person.
         - (...)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
