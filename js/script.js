@@ -23,7 +23,11 @@ const populateSelectOptions = (data) => {
 // Function to set the profile image and name
 const setProfileDetails = (data) => {
     document.title = data.profile.title;
-    document.getElementById('profile-image').src = data.profile.image;
+    if (data.profile.image){
+        document.getElementById('profile-image').src = data.profile.image;
+    }else{
+        document.getElementById('profile-image').src = 'images/default_profile_image.png'
+    }
     document.getElementById('name').textContent = data.profile.name;
 };
 

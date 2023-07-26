@@ -3,7 +3,7 @@
         "title": "Artur Assis - Resume",
         "name": "Your Name",
         "email": "your.email@example.com",
-        "image": "images/profile_photo.png",
+        "image": "images/default_profile_image.png",
         "socialMedia":{
             "wpp": "https://wa.me/+1234567890",
             "github": "https://github.com/ArturAssisComp",
