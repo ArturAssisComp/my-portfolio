@@ -1,0 +1,174 @@
+{
+    "profile": {
+        "title": "mandatory",
+        "name": "mandatory",
+        "email": "optional",
+        "image": "optional",
+        "socialMedia":{
+            "<social-media-name>": "optional",
+            "...":"..."
+        }
+    },
+    "curricula":{
+        "<curriculum-name>":{
+            "lastUpdated": "mandatory: YYYY-MM-DDThh:mm:ssZ",
+            "presentationText": {
+                "title": "mandatory",
+                "text": "mandatory"
+            },
+            "professionalExperience": [
+                {
+                    "role": "mandatory",
+                    "seniority": "optional",
+                    "company": "optional",
+                    "startDate": "mandatory: YYYY-MM-DD",
+                    "endDate": "optional: YYYY-MM-DD",
+                    "description": "optional",
+                    "projects": [
+                        {
+                            "name": "mandatory",
+                            "duration": 0, 
+                            "description": "mandatory",
+                            "responsibilities": [
+                                "optional",
+                                "..."
+                            ],
+                            "achievements": [
+                                "optional",
+                                "..."
+                            ],
+                            "skillsUsed": ["optional", "..."]
+                        },
+                        "..."
+                    ]
+                },
+                "..."
+            ],
+            "skills":{
+                "technical":{
+                    "<skill-name>":{
+                        "level": "mandatory",
+                        "description": "optional",
+                        "frameworks":[
+                            "optional",
+                            "..."
+                        ]
+                    },
+                    "...":"..."
+                },
+                "soft":{
+                    "<skill-name>":{
+                        "level": "mandatory",
+                        "description": "optional",
+                        "keywords":[
+                            "optional",
+                            "..."
+                        ]
+                    },
+                    "...":"..."
+                }
+            },
+            "education":[
+                {
+                    "level": "mandatory",
+                    "field": "optional",
+                    "institution": "mandatory",
+                    "startYear": 0,
+                    "endYear": 0,
+                    "major": "optional",
+                    "minor": "optional",
+                    "relevant_courses": ["optional", "..."],
+                    "academic_achievements": ["optional", "..."],
+                    "link_for_institution":"optional"
+                },
+                "..."
+            ],
+            "languages": [
+                {
+                  "language": "mandatory",
+                  "proficiency": "mandatory",
+                  "certifications": [
+                    {
+                      "name": "mandatory",
+                      "score": "optional",
+                      "date_received": "optional",
+                      "link": "optional"
+                    },
+                    "..."
+                  ],
+                  "native": true,
+                  "writing": "optional",
+                  "reading": "optional",
+                  "speaking": "optional",
+                  "listening": "optional"
+                },
+                "..."
+              ],
+            "papers":[
+                {
+                    "title": "mandatory",
+                    "authors": ["mandatory", "..."],
+                    "journal": "optional",
+                    "volume": "optional",
+                    "number": "optional",
+                    "pages": "optional",
+                    "conference": "optional",
+                    "year": "optional: YYYY",
+                    "doi": "optional",
+                    "description": "optional",
+                    "keywords": ["optional", "..."],
+                    "download_link": "optional",
+                    "video_documentation_link": "optional"
+                },
+                "..."
+            ],
+            "achievements":[
+                {
+                    "type":"course",
+                    "title":"mandatory",
+                    "institution":"optional",
+                    "finishedDate":"mandatory: yyyy-MM-DD",
+                    "duration":0,
+                    "description":"mandatory",
+                    "courseLink":"optional",  
+                    "projectLink":"optional",
+                    "skillsLearned": ["optional", "..."]
+                },
+                {
+                    "type":"programming-project",
+                    "title":"mandatory",
+                    "finishedDate":"mandatory: yyyy-MM-DD",
+                    "duration":0,
+                    "description":"mandatory",
+                    "repositoryLink":"optional",
+                    "workingProjectLink":"optional",
+                    "videoDocumentationLink": "optional",
+                    "skillsUsed": ["optional", "..."]
+                },
+                {
+                    "type":"personal-project",
+                    "title":"mandatory",
+                    "finishedDate":"mandatory: yyyy-MM-DD",
+                    "duration":0,
+                    "description":"mandatory",
+                    "workingProjectLink":"optional",
+                    "videoDocumentationLink": "optional",
+                    "skillsUsed": ["optional", "..."]
+                },
+                {
+                    "type": "certification",
+                    "title": "mandatory",
+                    "institution": "mandatory",
+                    "finishedDate":"mandatory: yyyy-MM-DD",
+                    "duration": 0,
+                    "description": "mandatory",
+                    "certificationLink": "optional",
+                    "skillsCertified": ["optional", "..."]
+                },
+                "..."
+            ]
+        },
+        "...":"..."
+    }
+}
+  
