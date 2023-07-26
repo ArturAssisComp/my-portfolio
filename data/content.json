@@ -1,253 +1,137 @@
 {
     "profile": {
-        "title": "Artur Assis - Resume",
-        "name": "Your Name",
-        "email": "your.email@example.com",
-        "image": "images/default_profile_image.png",
+        "title": "Resume - Artur Assis Alves",
+        "name": "Artur Assis Alves",
+        "email": "arturassiscomp@gmail.com",
+        "image": "images/artur_assis_profile.jpg",
         "socialMedia":{
-            "wpp": "https://wa.me/+1234567890",
+            "youtube": "https://www.youtube.com/channel/UCbBgUjhw95xX4X10Mf-enaQ",
             "github": "https://github.com/ArturAssisComp",
             "linkedin": "https://www.linkedin.com/in/artur-assis-91621515a/",
-            "facebook": "https://www.facebook.com/",
-            "instagram": "https://www.instagram.com/arturassiscomp/",
-            "twitter": "https://twitter.com/ArturAssisComp",
-            "youtube": "https://www.youtube.com/channel/UCbBgUjhw95xX4X10Mf-enaQ",
-            "medium": "https://medium.com/",
-            "telegram": "https://t.me/",
-            "discord": "https://discord.gg/",
-            "other social media": "https://www.example.com/"
+            "wpp": "https://wa.me/+5561983013819"
         }
     },
     "curricula":{
-        "Main Curriculum":{
-            "lastUpdated": "2023-07-21T12:34:56Z",
+        "Software Engineer - English Version":{
+            "lastUpdated": "2023-07-26T01:27:00Z",
             "presentationText": {
-                "title": "Main Curriculum",
-                "text": "This is a short description about me..."
+                "title": "Artur Assis Alves - Software Engineer",
+                "text": "As a dedicated Computer Engineering student, my passion lies in crafting innovative software systems that solve real-world problems. I strive to continually expand my technical skills while creating efficient, user-friendly solutions."
             },
+            "professionalExperience": [
+                {
+                    "role": "Software Engineer",
+                    "seniority": "Internship",
+                    "company": "LifeScheduler (Desenvolvimento Independente)",
+                    "startDate": "2023-04-01",
+                    "description": "Responsible for the design and architecture of a multi-platform Flutter/Dart application for productivity software. Employed various project management and development tools to ensure efficient workflow and high-quality code.",
+                    "projects": [
+                      {
+                        "name": "LifeScheduler App Development",
+                        "description": "Contributed to the development of LifeScheduler, a productivity app that is being built with Flutter/Dart. The application follows a layered architecture, includes Firebase for user authentication and data management, and was developed following the principles of Test-Driven Development (TDD).",
+                        "responsibilities": [
+                          "Application Architecture Design",
+                          "State Management with Bloc",
+                          "Integration of Firebase Authentication service",
+                          "Development of task system using Firebase Cloud Firestore Database",
+                          "Adherence to Test-Driven Development (TDD) principles"
+                        ],
+                        "achievements": [
+                          "Implemented the authentication system using Firebase Authentication service",
+                          "Implemented the task system using Firebase Cloud Firestore as database"
+                        ],
+                        "skillsUsed": [
+                          "Flutter",
+                          "Dart",
+                          "Jira",
+                          "Bitbucket",
+                          "Confluence",
+                          "Firebase",
+                          "Test-Driven Development (TDD)"
+                        ]
+                      }
+                    ]
+                  }
+            ],
             "skills":{
                 "technical":{
                     "Python":{
-                        "level": "Expert",
-                        "description": "I have contact with python during my graduation, and I have been using it for 3 years. I have experience with Django, Flask, Pandas, Numpy, Matplotlib, Seaborn, Scikit-learn, Pytorch, Tensorflow, Keras, and other libraries. I have experience with data science, machine learning, deep learning, and web development.",
-                        "frameworks":[
-                            "Django",
-                            "Flask"
-                        ]
-                    },
-                    "JavaScript":{
-                        "level": "Expert",
-                        "description": "I have contact with JavaScript during my graduation, and I have been using it for 3 years. I have experience with React, Node.js, Express, and other libraries. I have experience with web development.",
-                        "frameworks":[
-                            "React",
-                            "Node.js",
-                            "Express"
-                        ]
-                    },
-                    "Java":{
-                        "level": "Intermediate"
+                        "level": "Advanced",
+                        "description": "Used extensively in several projects for backend development, data engineering, and creating web applications. Proficient with libraries such as Django.",
+                        "frameworks":["Django"]
                     },
                     "C":{
-                        "level": "Intermediate"
+                        "level": "Advanced",
+                        "description": "Used for a variety of complex projects including the creation of a compiler, a shell for Unix systems, and a unit testing library.",
+                        "frameworks":[]
+                    },
+                    "JavaScript":{
+                        "level": "Intermediate",
+                        "description": "Used in various web application projects including portfolio creation and 3D scene building. Contact with libraries such as 3js.",
+                        "frameworks":["3js"]
+                    },
+                    "Dart":{
+                        "level": "Intermediate",
+                        "description": "Gained experience through a Flutter development bootcamp course, developing several applications.",
+                        "frameworks":["Flutter"]
+                    },
+                    "Go":{
+                        "level": "Intermediate",
+                        "description": "Used in the development of a causal tree data structure project under the guidance of an experienced engineer and during a distrubuted systems class.",
+                        "frameworks":[]
+                    },
+                    "Software Testing":{
+                        "level": "Intermediate",
+                        "description": "Gained experience through a course on software testing using the TestLink tool.",
+                        "frameworks":["TestLink"]
+                    },
+                    "C#":{
+                        "level": "Intermediate",
+                        "description": "Used in a Unity game development course, developing multiple game concepts.",
+                        "frameworks":["Unity"]
+                    },
+                    "HTML":{
+                        "level": "Intermediate",
+                        "description": "Used in various web application projects including portfolio creation, 3D scene building, and game development.",
+                        "frameworks":[]
+                    },
+                    "CSS":{
+                        "level": "Basic",
+                        "description": "Used in various web application projects for styling and presentation.",
+                        "frameworks":[]
                     }
                 },
                 "soft":{
-                    "Communication":{
-                        "level": "Expert",
-                        "description": "I have experience with public speaking, and I have been a speaker at events and meetups. I have experience with writing articles and tutorials. I have experience with teaching and mentoring.",
-                        "keywords":[
-                            "Public Speaking",
-                            "Writing",
-                            "Teaching",
-                            "Mentoring"
-                        ]
-                    },
-                    "Leadership":{
-                        "level": "Expert",
-                        "description": "I have experience with leading teams and projects. I have experience with managing people and resources.",
-                        "keywords":[
-                            "Team Leadership",
-                            "Project Management",
-                            "People Management",
-                            "Resource Management"
-                        ]
-                    },
-                    "Teamwork":{
-                        "level": "Expert",
-                        "description": "I have experience with working in teams. I have experience with collaborating with people from different backgrounds.",
-                        "keywords":[
-                            "Teamwork",
-                            "Collaboration"
-                        ]
-                    },
                     "Problem Solving":{
-                        "level": "Expert",
-                        "description": "I have experience with solving complex problems. I have experience with analyzing problems and finding solutions.",
-                        "keywords":[
-                            "Problem Solving",
-                            "Analytical Thinking"
-                        ]
+                        "level": "Advanced",
+                        "description": "Applied problem-solving skills extensively in a range of complex software development projects."
                     },
-                    "Creativity":{
-                        "level": "Expert",
-                        "description": "I have experience with coming up with creative solutions. I have experience with thinking outside the box.",
-                        "keywords":[
-                            "Creativity",
-                            "Out of the Box Thinking"
-                        ]
+                    "Team Collaboration":{
+                        "level": "Advanced",
+                        "description": "Worked effectively within a team environment in several projects, including the causal tree data structure project."
                     },
-                    "Adaptability":{
-                        "level": "Intermediate",
-                        "description": "I have experience with adapting to new situations. I have experience with learning new things quickly.",
-                        "keywords":[
-                            "Adaptability",
-                            "Fast Learner"
-                        ]
+                    "Communication":{
+                        "level": "Advanced",
+                        "description": "Proficient in both English and Portuguese, and have developed strong written and verbal communication skills through my studies and projects."
                     }
                 }
             },
             "education":[
                 {
-                    "level": "Bachelor's",
-                    "field": "Computer Science",
-                    "institution": "ABC University",
-                    "startYear": 2012,
-                    "endYear": 2016,
-                    "major": "Artificial Intelligence",
-                    "minor": "Mathematics",
-                    "relevant_courses": ["Machine Learning", "Data Structures and Algorithms", "Artificial Intelligence", "Database Systems"],
-                    "academic_achievements": ["Dean's list for 4 consecutive years", "Winner of Stanford's Annual Coding Competition"],
-                    "link_for_institution":"https://www.example.com/"
-                },
-                {
-                    "level": "Master's",
-                    "field": "Computer Science",
-                    "institution": "ABC University",
-                    "startYear": 2016,
-                    "endYear": 2050,
-                    "major": "Artificial Intelligence",
-                    "minor": "Mathematics"
-                }
-            ],
-            "professionalExperience": [
-                {
-                    "role": "Software Engineer",
-                    "seniority": "Senior",
-                    "company": "Company 1",
-                    "startDate": "2018-07-01",
-                    "endDate": "2022-07-01",
-                    "description": "Worked on developing and maintaining the company's main software product...",
-                    "projects": [
-                        {
-                            "name": "Project 1",
-                            "duration": 2, 
-                            "description": "This project involved building a complex web application...",
-                            "responsibilities": [
-                                "Led a team of 5 developers",
-                                "Designed the application architecture",
-                                "Implemented key components of the system"
-                            ],
-                            "achievements": [
-                                "Successfully delivered the project on time",
-                                "Achieved a customer satisfaction rating of 95%",
-                                "The application was recognized as 'Best Web Application' in the XYZ Awards 2019"
-                            ],
-                            "skillsUsed": ["JavaScript", "React", "Node.js", "MySQL"]
-                        },
-                        {
-                            "name": "Project 2",
-                            "duration": 4,
-                            "description": "This project involves maintaining and extending a large-scale e-commerce platform...",
-                            "responsibilities": [
-                                "Manage deployments and releases",
-                                "Optimize performance and scalability",
-                                "Implement new features based on customer feedback"
-                            ],
-                            "skillsUsed": ["Python", "Django", "PostgreSQL", "Docker"]
-                        }
-                    ]
-                },
-                {
-                    "role": "Developer",
-                    "seniority": "Junior",
-                    "company": "Company 2",
-                    "startDate": "2016-01-01",
-                    "endDate": "2018-06-30",
-                    "description": "Assisted in building and testing new features for the company's web application..."
-                }
-            ],
-            "achievements":[
-                {
-                    "type":"course",
-                    "title":"Course 1",
-                    "institution":"Institution 1",
-                    "finishedDate":"2020-01-01",
-                    "duration":3,
-                    "description":"This is a short description about the course...",
-                    "courseLink":"https://www.example.com/",  
-                    "projectLink":"https://www.example.com/",
-                    "skillsLearned": ["Python", "Django", "PostgreSQL", "Docker"]
-                },
-                {
-                    "type":"programming-project",
-                    "title":"Project 1",
-                    "finishedDate":"2020-01-01",
-                    "duration":3,
-                    "description":"This is a short description about the project...",
-                    "repositoryLink":"https://www.example.com/",
-                    "workingProjectLink":"https://www.example.com/",
-                    "videoDocumentationLink": "https://www.youtube.com/embed/SYgkHIase9c",
-                    "skillsUsed": ["Python", "Django", "PostgreSQL", "Docker"]
-                },
-                {
-                    "type":"personal-project",
-                    "title":"Project 1",
-                    "finishedDate":"2020-01-01",
-                    "duration":3,
-                    "description":"This is a short description about the project...",
-                    "workingProjectLink":"https://www.example.com/",
-                    "videoDocumentationLink": "https://www.youtube.com/embed/SYgkHIase9c",
-                    "skillsUsed": ["Python", "Django", "PostgreSQL", "Docker"]
-                },
-                {
-                    "type": "certification",
-                    "title": "Certification SQL",
-                    "institution": "Institution 1",
-                    "finishedDate": "2020-01-01",
-                    "duration": 3,
-                    "description": "This is a short description about the certification...",
-                    "certificationLink": "https://www.example.com/",
-                    "skillsCertified": ["Python", "Django", "PostgreSQL", "Docker"]
-                }
-            ]
-        },
-        "Secondary Curriculum":{
-            "lastUpdated": "2022-07-21T12:34:56Z",
-            "presentationText": {
-                "title": "Secondary Curriculum",
-                "text": "This is a short description about me..."
-            },
-            "professionalExperience": [
-                {
-                    "role": "Junior Developer",
-                    "company": "Company 2",
-                    "startDate": "2016-01-01",
-                    "endDate": "2018-06-30",
-                    "description": "Assisted in building and testing new features for the company's web application..."
+                    "level": "Undergraduate",
+                    "field": "Computer Engineering",
+                    "institution": "Aeronautics Institute of Technology (ITA)",
+                    "startYear": 2019,
+                    "endYear": 2023,
+                    "major": "Computer Engineering",
+                    "relevant_courses": ["Algorithms and Data Structures", "Computer Security", "Compilers", "Operating Systems", "Software Engineering", "Statistics", "Databases"],
+                    "link_for_institution": "https://en.wikipedia.org/wiki/Instituto_Tecnol%C3%B3gico_de_Aeron%C3%A1utica"
                 }
             ],
             "languages": [
                 {
-                  "language": "English",
-                  "proficiency": "Native or bilingual proficiency",
-                  "certifications": [
-                    {
-                      "name": "TOEFL iBT",
-                      "score": "114",
-                      "date_received": "2018",
-                      "link": "http://example-link-to-certification.com"
-                    }
-                  ],
+                  "language": "Portuguese",
+                  "proficiency": "Fluent",
                   "native": true,
                   "writing": "Fluent",
                   "reading": "Fluent",
@@ -255,67 +139,126 @@
                   "listening": "Fluent"
                 },
                 {
-                  "language": "French",
-                  "proficiency": "Professional working proficiency",
-                  "certifications": [
-                    {
-                      "name": "DELF B2",
-                      "date_received": "2020",
-                      "link": "http://example-link-to-certification.com"
-                    }
-                  ],
-                  "native": false,
-                  "writing": "Good",
-                  "reading": "Good",
-                  "speaking": "Good",
-                  "listening": "Good"
+                  "language": "English",
+                  "proficiency": "Advanced",
+                  "native": true,
+                  "writing": "Intermediate",
+                  "reading": "Advanced",
+                  "speaking": "Intermediate",
+                  "listening": "Intermediate"
+                }
+              ],
+            "achievements":[
+                {
+                    "type":"programming-project",
+                    "title":"My Portfolio",
+                    "finishedDate":"2023-7-26",
+                    "duration":1,
+                    "description":"Web application project (Javascript, HTML, CSS) facilitating creation of user's formatted portfolio HTML page with data stored in JSON for easy updates, accommodating multiple resume versions, photo and social network integration, professional experiences, courses, papers, and more, offering multiple formatting themes and SEO optimizations.",
+                    "repositoryLink":"https://github.com/ArturAssisComp/my-portfolio",
+                    "workingProjectLink":"https://arturassiscomp.github.io/my-portfolio/",
+                    "skillsUsed": ["JavaScript", "HTML", "CSS", "JSON", "Web Application Development", "User Interface Design", "SEO", "Data Management"]
                 },
                 {
-                  "language": "German",
-                  "proficiency": "Elementary proficiency",
-                  "native": false,
-                  "writing": "Basic",
-                  "reading": "Basic",
-                  "speaking": "Basic",
-                  "listening": "Basic"
-                }
-              ]
-        },
-        "Third Curriculum":{
-            "lastUpdated": "2022-07-21T12:34:56Z",
-            "presentationText": {
-                "title": "Third Curriculum",
-                "text": "This is a short description about me..."
-            },
-            "papers":[
-                {
-                    "title": "Paper 1",
-                    "authors": ["Author 1", "Author 2", "Author 3"],
-                    "journal": "Journal 1",
-                    "volume": "Volume 1",
-                    "number": "Number 1",
-                    "pages": "Pages 1",
-                    "conference": "Conference 1",
-                    "year": "2020",
-                    "doi": "https://doi.org/10.000/12345",
-                    "description": "This is the abstract of the paper...",
-                    "keywords": ["Keyword 1", "Keyword 2", "Keyword 3"],
-                    "download_link": "https://www.example.com/",
-                    "video_documentation_link": "https://www.youtube.com/embed/SYgkHIase9c"
+                    "type":"programming-project",
+                    "title":"MinerSUS - Data Engineering Project for loading SUS (Unified Health System) data to be used for breast cancer-related research",
+                    "finishedDate":"2023-6-1",
+                    "description":"Design, implementation, and automation of an ELT (Extract, Load, and Transform) process for SUS data. For this task, a Python framework was developed which allows creating a pipeline with block architecture that processes the data in batches, automated with a task scheduler.",
+                    "videoDocumentationLink": "https://www.youtube.com/embed/nmFOBFzBNm8",
+                    "skillsUsed": ["Python", "Data Engineering", "ELT", "Automated Task Scheduling", "Batch Processing", "Data Pipeline Architecture", "Block Architecture"]
                 },
                 {
-                    "title": "Paper 2",
-                    "authors": ["Author 1", "Author 2", "Author 3"],
-                    "journal": "Journal 2",
-                    "volume": "Volume 2",
-                    "number": "Number 2",
-                    "pages": "Pages 2",
-                    "conference": "Conference 2",
-                    "year": "2020",
-                    "doi": "https://doi.org/10.000/12345",
-                    "description": "This is the abstract of the paper...",
-                    "keywords": ["Keyword 1", "Keyword 2", "Keyword 3"]
+                    "type":"course",
+                    "title":"The Complete 2021 Flutter Development Bootcamp with Dart",
+                    "institution":"The App Brewery",
+                    "finishedDate":"2023-4-18",
+                    "description":"Programming course in Flutter for creating applications with more than 23 hours of lessons, in which 13 applications were developed in flutter with the aim of practicing different aspects. The course presented fundamentals of Dart and Flutter, Firebase, communication with external APIs, basic concepts of stream, state management, etc. This course served as a starting point for my journey in Flutter.",
+                    "courseLink":"https://appbrewery.com/p/flutter-development-bootcamp-with-dart",
+                    "projectLink":"https://github.com/stars/ArturAssisComp/lists/flutter-bootcamp",
+                    "skillsLearned": ["Dart", "Flutter", "Firebase", "APIs", "Streams", "State Management"]
+                },
+                {
+                    "type":"course",
+                    "title":"Software Testing - Course on TestLink",
+                    "institution":"YouTube",
+                    "finishedDate":"2023-7-10",
+                    "description":"Course on software testing using the TestLink tool. The course presents techniques for creating tests based on requirements, exploration testing, design strategy, planning and execution of tests, test reports, test automation, etc. As an exercise, a video was recorded demonstrating the process of design, planning and execution of tests for a project in use using TestLink.",
+                    "courseLink":"https://youtu.be/9QxefI4LRIA",
+                    "projectLink":"https://youtu.be/SYgkHIase9c",
+                    "skillsLearned": ["Software Testing", "TestLink", "Test Design", "Test Planning", "Test Execution", "Test Automation"]
+                },
+                {
+                    "type":"programming-project",
+                    "title":"Site Covid-19 — Website for a Software Engineering class project",
+                    "finishedDate":"2020-6-1",
+                    "description":"The project is about a website used for visualization and storage of recent data from patients with COVID-19. The Django framework, in python, was used for the website backend. During the development, libs that allow data visualization and pdf generation were used.",
+                    "repositoryLink":"https://github.com/ArturAssisComp/site-covid19",
+                    "videoDocumentationLink": "https://www.youtube.com/embed/g2Ve6Y3sYGE",
+                    "skillsUsed": ["Python", "Django", "Backend Development", "Data Visualization", "PDF Generation", "Web Development", "Database Management"]
+                },
+                {
+                    "type":"programming-project",
+                    "title":"ctest — Project of a unit test lib for C",
+                    "finishedDate":"2023-2-1",
+                    "description":"A lib for unit testing in C was developed. The lib was inspired by the python’s lib unittest. It prints each test result legibly and clearly. During the work on this project, concepts about C and unit tests were worked on.",
+                    "repositoryLink":"https://github.com/ArturAssisComp/ctest",
+                    "videoDocumentationLink": "https://www.youtube.com/embed/8QzIssYHSkc",
+                    "skillsUsed": ["C", "Unit Testing", "Library Development", "Software Development"]
+                },
+                {
+                    "type":"programming-project",
+                    "title":"C-- — Project of a simplified C compiler",
+                    "finishedDate":"2022-11-23",
+                    "description":"In group, the following components were developed: lexer, parser, semantic analyzer and intermediate code generator for a subset of the C language. The project was developed in C, with the support of the tools flex and bison. Concepts of compilers and of tools for generating lexers and parsers were worked during the project. ",
+                    "repositoryLink":"https://github.com/ArturAssisComp/c--",
+                    "videoDocumentationLink": "https://www.youtube.com/embed/pf0wrsij2Vg",
+                    "skillsUsed": ["C", "Compiler Construction", "Lexical Analysis", "Syntax Analysis", "Semantic Analysis", "Intermediate Code Generation", "Flex", "Bison"]
+                },
+                {
+                    "type":"programming-project",
+                    "title":"miniShell — Project of a basic shell for Unix systems",
+                    "finishedDate":"2022-5-1",
+                    "description":"A basic shell for the Unix environment was developed during this project. It was implemented in C. Concepts about operating systems (system calls, processes, interprocess communication, etc), Unix environment, pipelines, and the operation of a shell were worked on during this project.",
+                    "repositoryLink":"https://github.com/ArturAssisComp/miniShell",
+                    "videoDocumentationLink": "https://www.youtube.com/embed/cazH0zqtakI",
+                    "skillsUsed": ["C", "Unix", "Shell Programming", "Operating Systems", "System Calls", "Processes", "Interprocess Communication", "Pipelines"]
+                },
+                {
+                    "type":"programming-project",
+                    "title":"causalTree — Project of an API that is the implementation of a data structure called causal tree",
+                    "finishedDate":"2023-7-26",
+                    "description":"Participation, with the orientation of an experienced engineer, on the project of implementation of a data structure named causal tree, a kind of conflict free replicated data type (CRDT). The implementation is being done in Go.",
+                    "repositoryLink":"https://github.com/crdteam/causal-tree",
+                    "skillsUsed": ["Go", "API Development", "Data Structures", "Conflict Free Replicated Data Types (CRDTs)", "Team Collaboration"]
+                },
+                {
+                    "type":"course",
+                    "title":"Unity Learning — Junior programmer course by Unity",
+                    "institution":"Unity",
+                    "finishedDate":"2021-9-28",
+                    "description":"Learning programming and software development using game development on Unity, that uses C#, as a background. Some games and concepts were developed during the course.",
+                    "projectLink":"https://github.com/ArturAssisComp/Unity-Learning-Junior-Programmer",
+                    "skillsLearned": ["C#", "Unity", "Game Development", "Software Development", "Programming Concepts"]
+                },
+                {
+                    "type":"programming-project",
+                    "title":"3js-computer-graphics - A basic 3D scene",
+                    "finishedDate":"2022-12-2",
+                    "description":"This is a basic 3D scene built during for a computer graphics class. The 3js lib and a 3D modeling software were used ",
+                    "repositoryLink":"https://github.com/ArturAssisComp/3js-computer-graphics",
+                    "workingProjectLink":"https://arturassiscomp.github.io/3js-computer-graphics",
+                    "skillsUsed": ["JavaSctipt", "3js", "html", "3D software modeling"]
+                },
+                {
+                    "type":"programming-project",
+                    "title":"Tangram - A basic tangram game build using html and JS",
+                    "finishedDate":"2022-9-11",
+                    "description":"A basic tangram that allows the user to move the geometric figures to complete the game. It allows rotation too.",
+                    "repositoryLink":"https://github.com/ArturAssisComp/tangram",
+                    "workingProjectLink":"https://arturassiscomp.github.io/tangram",
+                    "skillsUsed": ["JavaSctipt", "html"]
                 }
+
             ]
         }
     }

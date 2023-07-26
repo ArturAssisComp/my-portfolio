@@ -1,0 +1,323 @@
+{
+    "profile": {
+        "title": "Artur Assis - Resume",
+        "name": "Your Name",
+        "email": "your.email@example.com",
+        "image": "images/default_profile_image.png",
+        "socialMedia":{
+            "wpp": "https://wa.me/+1234567890",
+            "github": "https://github.com/ArturAssisComp",
+            "linkedin": "https://www.linkedin.com/in/artur-assis-91621515a/",
+            "facebook": "https://www.facebook.com/",
+            "instagram": "https://www.instagram.com/arturassiscomp/",
+            "twitter": "https://twitter.com/ArturAssisComp",
+            "youtube": "https://www.youtube.com/channel/UCbBgUjhw95xX4X10Mf-enaQ",
+            "medium": "https://medium.com/",
+            "telegram": "https://t.me/",
+            "discord": "https://discord.gg/",
+            "other social media": "https://www.example.com/"
+        }
+    },
+    "curricula":{
+        "Main Curriculum":{
+            "lastUpdated": "2023-07-21T12:34:56Z",
+            "presentationText": {
+                "title": "Main Curriculum",
+                "text": "This is a short description about me..."
+            },
+            "skills":{
+                "technical":{
+                    "Python":{
+                        "level": "Expert",
+                        "description": "I have contact with python during my graduation, and I have been using it for 3 years. I have experience with Django, Flask, Pandas, Numpy, Matplotlib, Seaborn, Scikit-learn, Pytorch, Tensorflow, Keras, and other libraries. I have experience with data science, machine learning, deep learning, and web development.",
+                        "frameworks":[
+                            "Django",
+                            "Flask"
+                        ]
+                    },
+                    "JavaScript":{
+                        "level": "Expert",
+                        "description": "I have contact with JavaScript during my graduation, and I have been using it for 3 years. I have experience with React, Node.js, Express, and other libraries. I have experience with web development.",
+                        "frameworks":[
+                            "React",
+                            "Node.js",
+                            "Express"
+                        ]
+                    },
+                    "Java":{
+                        "level": "Intermediate"
+                    },
+                    "C":{
+                        "level": "Intermediate"
+                    }
+                },
+                "soft":{
+                    "Communication":{
+                        "level": "Expert",
+                        "description": "I have experience with public speaking, and I have been a speaker at events and meetups. I have experience with writing articles and tutorials. I have experience with teaching and mentoring.",
+                        "keywords":[
+                            "Public Speaking",
+                            "Writing",
+                            "Teaching",
+                            "Mentoring"
+                        ]
+                    },
+                    "Leadership":{
+                        "level": "Expert",
+                        "description": "I have experience with leading teams and projects. I have experience with managing people and resources.",
+                        "keywords":[
+                            "Team Leadership",
+                            "Project Management",
+                            "People Management",
+                            "Resource Management"
+                        ]
+                    },
+                    "Teamwork":{
+                        "level": "Expert",
+                        "description": "I have experience with working in teams. I have experience with collaborating with people from different backgrounds.",
+                        "keywords":[
+                            "Teamwork",
+                            "Collaboration"
+                        ]
+                    },
+                    "Problem Solving":{
+                        "level": "Expert",
+                        "description": "I have experience with solving complex problems. I have experience with analyzing problems and finding solutions.",
+                        "keywords":[
+                            "Problem Solving",
+                            "Analytical Thinking"
+                        ]
+                    },
+                    "Creativity":{
+                        "level": "Expert",
+                        "description": "I have experience with coming up with creative solutions. I have experience with thinking outside the box.",
+                        "keywords":[
+                            "Creativity",
+                            "Out of the Box Thinking"
+                        ]
+                    },
+                    "Adaptability":{
+                        "level": "Intermediate",
+                        "description": "I have experience with adapting to new situations. I have experience with learning new things quickly.",
+                        "keywords":[
+                            "Adaptability",
+                            "Fast Learner"
+                        ]
+                    }
+                }
+            },
+            "education":[
+                {
+                    "level": "Bachelor's",
+                    "field": "Computer Science",
+                    "institution": "ABC University",
+                    "startYear": 2012,
+                    "endYear": 2016,
+                    "major": "Artificial Intelligence",
+                    "minor": "Mathematics",
+                    "relevant_courses": ["Machine Learning", "Data Structures and Algorithms", "Artificial Intelligence", "Database Systems"],
+                    "academic_achievements": ["Dean's list for 4 consecutive years", "Winner of Stanford's Annual Coding Competition"],
+                    "link_for_institution":"https://www.example.com/"
+                },
+                {
+                    "level": "Master's",
+                    "field": "Computer Science",
+                    "institution": "ABC University",
+                    "startYear": 2016,
+                    "endYear": 2050,
+                    "major": "Artificial Intelligence",
+                    "minor": "Mathematics"
+                }
+            ],
+            "professionalExperience": [
+                {
+                    "role": "Software Engineer",
+                    "seniority": "Senior",
+                    "company": "Company 1",
+                    "startDate": "2018-07-01",
+                    "endDate": "2022-07-01",
+                    "description": "Worked on developing and maintaining the company's main software product...",
+                    "projects": [
+                        {
+                            "name": "Project 1",
+                            "duration": 2, 
+                            "description": "This project involved building a complex web application...",
+                            "responsibilities": [
+                                "Led a team of 5 developers",
+                                "Designed the application architecture",
+                                "Implemented key components of the system"
+                            ],
+                            "achievements": [
+                                "Successfully delivered the project on time",
+                                "Achieved a customer satisfaction rating of 95%",
+                                "The application was recognized as 'Best Web Application' in the XYZ Awards 2019"
+                            ],
+                            "skillsUsed": ["JavaScript", "React", "Node.js", "MySQL"]
+                        },
+                        {
+                            "name": "Project 2",
+                            "duration": 4,
+                            "description": "This project involves maintaining and extending a large-scale e-commerce platform...",
+                            "responsibilities": [
+                                "Manage deployments and releases",
+                                "Optimize performance and scalability",
+                                "Implement new features based on customer feedback"
+                            ],
+                            "skillsUsed": ["Python", "Django", "PostgreSQL", "Docker"]
+                        }
+                    ]
+                },
+                {
+                    "role": "Developer",
+                    "seniority": "Junior",
+                    "company": "Company 2",
+                    "startDate": "2016-01-01",
+                    "endDate": "2018-06-30",
+                    "description": "Assisted in building and testing new features for the company's web application..."
+                }
+            ],
+            "achievements":[
+                {
+                    "type":"course",
+                    "title":"Course 1",
+                    "institution":"Institution 1",
+                    "finishedDate":"2020-01-01",
+                    "duration":3,
+                    "description":"This is a short description about the course...",
+                    "courseLink":"https://www.example.com/",  
+                    "projectLink":"https://www.example.com/",
+                    "skillsLearned": ["Python", "Django", "PostgreSQL", "Docker"]
+                },
+                {
+                    "type":"programming-project",
+                    "title":"Project 1",
+                    "finishedDate":"2020-01-01",
+                    "duration":3,
+                    "description":"This is a short description about the project...",
+                    "repositoryLink":"https://www.example.com/",
+                    "workingProjectLink":"https://www.example.com/",
+                    "videoDocumentationLink": "https://www.youtube.com/embed/SYgkHIase9c",
+                    "skillsUsed": ["Python", "Django", "PostgreSQL", "Docker"]
+                },
+                {
+                    "type":"personal-project",
+                    "title":"Project 1",
+                    "finishedDate":"2020-01-01",
+                    "duration":3,
+                    "description":"This is a short description about the project...",
+                    "workingProjectLink":"https://www.example.com/",
+                    "videoDocumentationLink": "https://www.youtube.com/embed/SYgkHIase9c",
+                    "skillsUsed": ["Python", "Django", "PostgreSQL", "Docker"]
+                },
+                {
+                    "type": "certification",
+                    "title": "Certification SQL",
+                    "institution": "Institution 1",
+                    "finishedDate": "2020-01-01",
+                    "duration": 3,
+                    "description": "This is a short description about the certification...",
+                    "certificationLink": "https://www.example.com/",
+                    "skillsCertified": ["Python", "Django", "PostgreSQL", "Docker"]
+                }
+            ]
+        },
+        "Secondary Curriculum":{
+            "lastUpdated": "2022-07-21T12:34:56Z",
+            "presentationText": {
+                "title": "Secondary Curriculum",
+                "text": "This is a short description about me..."
+            },
+            "professionalExperience": [
+                {
+                    "role": "Junior Developer",
+                    "company": "Company 2",
+                    "startDate": "2016-01-01",
+                    "endDate": "2018-06-30",
+                    "description": "Assisted in building and testing new features for the company's web application..."
+                }
+            ],
+            "languages": [
+                {
+                  "language": "English",
+                  "proficiency": "Native or bilingual proficiency",
+                  "certifications": [
+                    {
+                      "name": "TOEFL iBT",
+                      "score": "114",
+                      "date_received": "2018",
+                      "link": "http://example-link-to-certification.com"
+                    }
+                  ],
+                  "native": true,
+                  "writing": "Fluent",
+                  "reading": "Fluent",
+                  "speaking": "Fluent",
+                  "listening": "Fluent"
+                },
+                {
+                  "language": "French",
+                  "proficiency": "Professional working proficiency",
+                  "certifications": [
+                    {
+                      "name": "DELF B2",
+                      "date_received": "2020",
+                      "link": "http://example-link-to-certification.com"
+                    }
+                  ],
+                  "native": false,
+                  "writing": "Good",
+                  "reading": "Good",
+                  "speaking": "Good",
+                  "listening": "Good"
+                },
+                {
+                  "language": "German",
+                  "proficiency": "Elementary proficiency",
+                  "native": false,
+                  "writing": "Basic",
+                  "reading": "Basic",
+                  "speaking": "Basic",
+                  "listening": "Basic"
+                }
+              ]
+        },
+        "Third Curriculum":{
+            "lastUpdated": "2022-07-21T12:34:56Z",
+            "presentationText": {
+                "title": "Third Curriculum",
+                "text": "This is a short description about me..."
+            },
+            "papers":[
+                {
+                    "title": "Paper 1",
+                    "authors": ["Author 1", "Author 2", "Author 3"],
+                    "journal": "Journal 1",
+                    "volume": "Volume 1",
+                    "number": "Number 1",
+                    "pages": "Pages 1",
+                    "conference": "Conference 1",
+                    "year": "2020",
+                    "doi": "https://doi.org/10.000/12345",
+                    "description": "This is the abstract of the paper...",
+                    "keywords": ["Keyword 1", "Keyword 2", "Keyword 3"],
+                    "download_link": "https://www.example.com/",
+                    "video_documentation_link": "https://www.youtube.com/embed/SYgkHIase9c"
+                },
+                {
+                    "title": "Paper 2",
+                    "authors": ["Author 1", "Author 2", "Author 3"],
+                    "journal": "Journal 2",
+                    "volume": "Volume 2",
+                    "number": "Number 2",
+                    "pages": "Pages 2",
+                    "conference": "Conference 2",
+                    "year": "2020",
+                    "doi": "https://doi.org/10.000/12345",
+                    "description": "This is the abstract of the paper...",
+                    "keywords": ["Keyword 1", "Keyword 2", "Keyword 3"]
+                }
+            ]
+        }
+    }
+}
+  
