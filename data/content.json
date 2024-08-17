@@ -13,7 +13,7 @@
     },
     "curricula":{
         "Software Engineer - English Version":{
-            "lastUpdated": "2023-07-26T01:27:00Z",
+            "lastUpdated": "2024-08-17T16:36:00Z",
             "presentationText": {
                 "title": "Artur Assis Alves - Software Engineer",
                 "text": "As a dedicated Computer Engineering student, my passion lies in crafting innovative software systems that solve real-world problems. I strive to continually expand my technical skills while creating efficient, user-friendly solutions."
@@ -21,8 +21,8 @@
             "professionalExperience": [
                 {
                     "role": "Software Engineer",
-                    "seniority": "Internship",
-                    "company": "LifeScheduler (Desenvolvimento Independente)",
+                    "seniority": "Junior",
+                    "company": "LifeScheduler",
                     "startDate": "2023-04-01",
                     "description": "Responsible for the design and architecture of a multi-platform Flutter/Dart application for productivity software. Employed various project management and development tools to ensure efficient workflow and high-quality code.",
                     "projects": [
@@ -37,6 +37,8 @@
                           "Adherence to Test-Driven Development (TDD) principles"
                         ],
                         "achievements": [
+                          "Deployed the alpha version for web (https://life-scheduler-production.web.app/) using Firebase",
+                          "Designed a multi-platform Flutter/Dart application for a productivity software with the aid of Jira, Bitbucket, and Confluence",
                           "Implemented the authentication system using Firebase Authentication service",
                           "Implemented the task system using Firebase Cloud Firestore as database"
                         ],
@@ -141,7 +143,7 @@
                 {
                   "language": "English",
                   "proficiency": "Advanced",
-                  "native": true,
+                  "native": false,
                   "writing": "Intermediate",
                   "reading": "Advanced",
                   "speaking": "Intermediate",
